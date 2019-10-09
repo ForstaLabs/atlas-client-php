@@ -1,5 +1,5 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
+    "name": "forsta-labs/atlas-php-client",
     "description": "User and Tag management API for Forsta Messaging Platform",
     "keywords": [
         "openapitools",
