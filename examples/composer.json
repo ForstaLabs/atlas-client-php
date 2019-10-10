@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ForstaLabs/atlas-php-client.git"
+    }
+  ],
+  "require": {
+    "forsta-labs/atlas-php-client": "*@dev"
+  }
+}
