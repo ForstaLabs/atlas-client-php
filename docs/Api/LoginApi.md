@@ -1,4 +1,4 @@
-# OpenAPI\Client\LoginApi
+# Swagger\Client\LoginApi
 
 All URIs are relative to *https://atlas.forsta.io/v1*
 
@@ -9,33 +9,30 @@ Method | HTTP request | Description
 [**loginSendRead**](LoginApi.md#loginSendRead) | **GET** /login/send/{org}/{tag_slug}/ | 
 
 
+# **loginAuthtokenCreate**
+> \Swagger\Client\Model\UserAuthentication loginAuthtokenCreate($data)
 
-## loginAuthtokenCreate
 
-> \OpenAPI\Client\Model\UserAuthentication loginAuthtokenCreate($data)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\LoginApi(
+$apiInstance = new Swagger\Client\Api\LoginApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \OpenAPI\Client\Model\UserAuthentication(); // \OpenAPI\Client\Model\UserAuthentication | 
+$data = new \Swagger\Client\Model\UserAuthentication(); // \Swagger\Client\Model\UserAuthentication | 
 
 try {
     $result = $apiInstance->loginAuthtokenCreate($data);
@@ -48,14 +45,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\OpenAPI\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)|  |
+ **data** | [**\Swagger\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)
+[**\Swagger\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)
 
 ### Authorization
 
@@ -63,40 +59,35 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **loginCreate**
+> \Swagger\Client\Model\UserAuthentication loginCreate($data)
 
 
-## loginCreate
-
-> \OpenAPI\Client\Model\UserAuthentication loginCreate($data)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\LoginApi(
+$apiInstance = new Swagger\Client\Api\LoginApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \OpenAPI\Client\Model\UserAuthentication(); // \OpenAPI\Client\Model\UserAuthentication | 
+$data = new \Swagger\Client\Model\UserAuthentication(); // \Swagger\Client\Model\UserAuthentication | 
 
 try {
     $result = $apiInstance->loginCreate($data);
@@ -109,14 +100,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\OpenAPI\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)|  |
+ **data** | [**\Swagger\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)
+[**\Swagger\Client\Model\UserAuthentication**](../Model/UserAuthentication.md)
 
 ### Authorization
 
@@ -124,41 +114,36 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **loginSendRead**
+> \Swagger\Client\Model\UserLoginSend loginSendRead($org, $tag_slug)
 
 
-## loginSendRead
-
-> \OpenAPI\Client\Model\UserLoginSend loginSendRead($org, $tag_slug)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\LoginApi(
+$apiInstance = new Swagger\Client\Api\LoginApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$org = 'org_example'; // string | 
-$tag_slug = 'tag_slug_example'; // string | 
+$org = "org_example"; // string | 
+$tag_slug = "tag_slug_example"; // string | 
 
 try {
     $result = $apiInstance->loginSendRead($org, $tag_slug);
@@ -171,7 +156,6 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **org** | **string**|  |
@@ -179,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserLoginSend**](../Model/UserLoginSend.md)
+[**\Swagger\Client\Model\UserLoginSend**](../Model/UserLoginSend.md)
 
 ### Authorization
 
@@ -187,10 +171,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

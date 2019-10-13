@@ -1,4 +1,4 @@
-# OpenAPI\Client\UserApi
+# Swagger\Client\UserApi
 
 All URIs are relative to *https://atlas.forsta.io/v1*
 
@@ -13,35 +13,30 @@ Method | HTTP request | Description
 [**userUpdate**](UserApi.md#userUpdate) | **PUT** /user/{id}/ | 
 
 
-
-## userCreate
-
-> \OpenAPI\Client\Model\User userCreate($data)
+# **userCreate**
+> \Swagger\Client\Model\User userCreate($data)
 
 
 
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \OpenAPI\Client\Model\User(); // \OpenAPI\Client\Model\User | 
+$data = new \Swagger\Client\Model\User(); // \Swagger\Client\Model\User | 
 
 try {
     $result = $apiInstance->userCreate($data);
@@ -54,14 +49,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\OpenAPI\Client\Model\User**](../Model/User.md)|  |
+ **data** | [**\Swagger\Client\Model\User**](../Model/User.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\User**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -69,16 +63,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## userDelete
-
+# **userDelete**
 > userDelete($id)
 
 
@@ -86,25 +76,22 @@ Name | Type | Description  | Notes
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this User.
+$id = "id_example"; // string | A UUID string identifying this User.
 
 try {
     $apiInstance->userDelete($id);
@@ -115,7 +102,6 @@ try {
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -131,43 +117,36 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## userInvite
-
-> \OpenAPI\Client\Model\User userInvite($id, $data)
+# **userInvite**
+> \Swagger\Client\Model\User userInvite($id, $data)
 
 
 
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this User.
-$data = new \OpenAPI\Client\Model\User(); // \OpenAPI\Client\Model\User | 
+$id = "id_example"; // string | A UUID string identifying this User.
+$data = new \Swagger\Client\Model\User(); // \Swagger\Client\Model\User | 
 
 try {
     $result = $apiInstance->userInvite($id, $data);
@@ -180,15 +159,14 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this User. |
- **data** | [**\OpenAPI\Client\Model\User**](../Model/User.md)|  |
+ **data** | [**\Swagger\Client\Model\User**](../Model/User.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\User**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -196,62 +174,55 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## userList
-
-> \OpenAPI\Client\Model\InlineResponse2005 userList($id, $email, $tags, $org__id, $user_type, $is_monitor, $created, $created__gt, $created__gte, $created__lt, $created__lte, $modified, $modified__gt, $modified__gte, $modified__lt, $modified__lte, $id_in, $phone_in, $email_in, $ordering, $search, $page, $page_size)
+# **userList**
+> \Swagger\Client\Model\InlineResponse2005 userList($id, $email, $tags, $org__id, $user_type, $is_monitor, $created, $created__gt, $created__gte, $created__lt, $created__lte, $modified, $modified__gt, $modified__gte, $modified__lt, $modified__lte, $id_in, $phone_in, $email_in, $ordering, $search, $page, $page_size)
 
 
 
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | 
-$email = 'email_example'; // string | 
-$tags = 'tags_example'; // string | 
-$org__id = 'org__id_example'; // string | 
-$user_type = 'user_type_example'; // string | 
-$is_monitor = 'is_monitor_example'; // string | 
-$created = 'created_example'; // string | 
-$created__gt = 'created__gt_example'; // string | 
-$created__gte = 'created__gte_example'; // string | 
-$created__lt = 'created__lt_example'; // string | 
-$created__lte = 'created__lte_example'; // string | 
-$modified = 'modified_example'; // string | 
-$modified__gt = 'modified__gt_example'; // string | 
-$modified__gte = 'modified__gte_example'; // string | 
-$modified__lt = 'modified__lt_example'; // string | 
-$modified__lte = 'modified__lte_example'; // string | 
-$id_in = 'id_in_example'; // string | Multiple values may be separated by commas.
-$phone_in = 'phone_in_example'; // string | Multiple values may be separated by commas.
-$email_in = 'email_in_example'; // string | Multiple values may be separated by commas.
-$ordering = 'ordering_example'; // string | Which field to use when ordering the results.
-$search = 'search_example'; // string | A search term.
+$id = "id_example"; // string | 
+$email = "email_example"; // string | 
+$tags = "tags_example"; // string | 
+$org__id = "org__id_example"; // string | 
+$user_type = "user_type_example"; // string | 
+$is_monitor = "is_monitor_example"; // string | 
+$created = "created_example"; // string | 
+$created__gt = "created__gt_example"; // string | 
+$created__gte = "created__gte_example"; // string | 
+$created__lt = "created__lt_example"; // string | 
+$created__lte = "created__lte_example"; // string | 
+$modified = "modified_example"; // string | 
+$modified__gt = "modified__gt_example"; // string | 
+$modified__gte = "modified__gte_example"; // string | 
+$modified__lt = "modified__lt_example"; // string | 
+$modified__lte = "modified__lte_example"; // string | 
+$id_in = "id_in_example"; // string | Multiple values may be separated by commas.
+$phone_in = "phone_in_example"; // string | Multiple values may be separated by commas.
+$email_in = "email_in_example"; // string | Multiple values may be separated by commas.
+$ordering = "ordering_example"; // string | Which field to use when ordering the results.
+$search = "search_example"; // string | A search term.
 $page = 56; // int | A page number within the paginated result set.
 $page_size = 56; // int | Number of results to return per page.
 
@@ -265,7 +236,6 @@ try {
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -295,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -303,43 +273,36 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## userPartialUpdate
-
-> \OpenAPI\Client\Model\User userPartialUpdate($id, $data)
+# **userPartialUpdate**
+> \Swagger\Client\Model\User userPartialUpdate($id, $data)
 
 
 
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this User.
-$data = new \OpenAPI\Client\Model\User(); // \OpenAPI\Client\Model\User | 
+$id = "id_example"; // string | A UUID string identifying this User.
+$data = new \Swagger\Client\Model\User(); // \Swagger\Client\Model\User | 
 
 try {
     $result = $apiInstance->userPartialUpdate($id, $data);
@@ -352,15 +315,14 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this User. |
- **data** | [**\OpenAPI\Client\Model\User**](../Model/User.md)|  |
+ **data** | [**\Swagger\Client\Model\User**](../Model/User.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\User**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -368,42 +330,35 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## userRead
-
-> \OpenAPI\Client\Model\User userRead($id)
+# **userRead**
+> \Swagger\Client\Model\User userRead($id)
 
 
 
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this User.
+$id = "id_example"; // string | A UUID string identifying this User.
 
 try {
     $result = $apiInstance->userRead($id);
@@ -416,14 +371,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this User. |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\User**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -431,43 +385,36 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## userUpdate
-
-> \OpenAPI\Client\Model\User userUpdate($id, $data)
+# **userUpdate**
+> \Swagger\Client\Model\User userUpdate($id, $data)
 
 
 
 API endpoint that allows users to be viewed or edited.
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Swagger\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this User.
-$data = new \OpenAPI\Client\Model\User(); // \OpenAPI\Client\Model\User | 
+$id = "id_example"; // string | A UUID string identifying this User.
+$data = new \Swagger\Client\Model\User(); // \Swagger\Client\Model\User | 
 
 try {
     $result = $apiInstance->userUpdate($id, $data);
@@ -480,15 +427,14 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this User. |
- **data** | [**\OpenAPI\Client\Model\User**](../Model/User.md)|  |
+ **data** | [**\Swagger\Client\Model\User**](../Model/User.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\User**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -496,10 +442,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

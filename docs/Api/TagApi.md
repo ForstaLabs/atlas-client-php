@@ -1,4 +1,4 @@
-# OpenAPI\Client\TagApi
+# Swagger\Client\TagApi
 
 All URIs are relative to *https://atlas.forsta.io/v1*
 
@@ -12,33 +12,30 @@ Method | HTTP request | Description
 [**tagUpdate**](TagApi.md#tagUpdate) | **PUT** /tag/{id}/ | 
 
 
+# **tagCreate**
+> \Swagger\Client\Model\Tag tagCreate($data)
 
-## tagCreate
 
-> \OpenAPI\Client\Model\Tag tagCreate($data)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagApi(
+$apiInstance = new Swagger\Client\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \OpenAPI\Client\Model\Tag(); // \OpenAPI\Client\Model\Tag | 
+$data = new \Swagger\Client\Model\Tag(); // \Swagger\Client\Model\Tag | 
 
 try {
     $result = $apiInstance->tagCreate($data);
@@ -51,14 +48,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)|  |
+ **data** | [**\Swagger\Client\Model\Tag**](../Model/Tag.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)
+[**\Swagger\Client\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -66,40 +62,35 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## tagDelete
-
+# **tagDelete**
 > tagDelete($id)
 
 
 
-### Example
 
+
+### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagApi(
+$apiInstance = new Swagger\Client\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this tag.
+$id = "id_example"; // string | A UUID string identifying this tag.
 
 try {
     $apiInstance->tagDelete($id);
@@ -110,7 +101,6 @@ try {
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -126,41 +116,36 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagList**
+> \Swagger\Client\Model\InlineResponse2004 tagList($ordering, $search, $page, $page_size)
 
 
-## tagList
-
-> \OpenAPI\Client\Model\InlineResponse2004 tagList($ordering, $search, $page, $page_size)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagApi(
+$apiInstance = new Swagger\Client\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ordering = 'ordering_example'; // string | Which field to use when ordering the results.
-$search = 'search_example'; // string | A search term.
+$ordering = "ordering_example"; // string | Which field to use when ordering the results.
+$search = "search_example"; // string | A search term.
 $page = 56; // int | A page number within the paginated result set.
 $page_size = 56; // int | Number of results to return per page.
 
@@ -175,7 +160,6 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ordering** | **string**| Which field to use when ordering the results. | [optional]
@@ -185,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -193,41 +177,36 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagPartialUpdate**
+> \Swagger\Client\Model\Tag tagPartialUpdate($id, $data)
 
 
-## tagPartialUpdate
-
-> \OpenAPI\Client\Model\Tag tagPartialUpdate($id, $data)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagApi(
+$apiInstance = new Swagger\Client\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this tag.
-$data = new \OpenAPI\Client\Model\Tag(); // \OpenAPI\Client\Model\Tag | 
+$id = "id_example"; // string | A UUID string identifying this tag.
+$data = new \Swagger\Client\Model\Tag(); // \Swagger\Client\Model\Tag | 
 
 try {
     $result = $apiInstance->tagPartialUpdate($id, $data);
@@ -240,15 +219,14 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this tag. |
- **data** | [**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)|  |
+ **data** | [**\Swagger\Client\Model\Tag**](../Model/Tag.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)
+[**\Swagger\Client\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -256,40 +234,35 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagRead**
+> \Swagger\Client\Model\Tag tagRead($id)
 
 
-## tagRead
-
-> \OpenAPI\Client\Model\Tag tagRead($id)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagApi(
+$apiInstance = new Swagger\Client\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this tag.
+$id = "id_example"; // string | A UUID string identifying this tag.
 
 try {
     $result = $apiInstance->tagRead($id);
@@ -302,14 +275,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this tag. |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)
+[**\Swagger\Client\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -317,41 +289,36 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagUpdate**
+> \Swagger\Client\Model\Tag tagUpdate($id, $data)
 
 
-## tagUpdate
-
-> \OpenAPI\Client\Model\Tag tagUpdate($id, $data)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagApi(
+$apiInstance = new Swagger\Client\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | A UUID string identifying this tag.
-$data = new \OpenAPI\Client\Model\Tag(); // \OpenAPI\Client\Model\Tag | 
+$id = "id_example"; // string | A UUID string identifying this tag.
+$data = new \Swagger\Client\Model\Tag(); // \Swagger\Client\Model\Tag | 
 
 try {
     $result = $apiInstance->tagUpdate($id, $data);
@@ -364,15 +331,14 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this tag. |
- **data** | [**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)|  |
+ **data** | [**\Swagger\Client\Model\Tag**](../Model/Tag.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Tag**](../Model/Tag.md)
+[**\Swagger\Client\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -380,10 +346,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

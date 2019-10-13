@@ -1,14 +1,13 @@
-# # InlineResponse2001
+# InlineResponse2001
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count** | **int** |  | 
 **next** | **string** |  | [optional] 
 **previous** | **string** |  | [optional] 
-**results** | [**\OpenAPI\Client\Model\UserDirectory[]**](UserDirectory.md) |  | 
+**results** | [**\Swagger\Client\Model\UserDirectory[]**](UserDirectory.md) |  | 
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

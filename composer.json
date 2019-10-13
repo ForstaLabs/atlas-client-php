@@ -1,39 +1,36 @@
 {
-    "name": "forsta-labs/atlas-php-client",
-    "description": "User and Tag management API for Forsta Messaging Platform",
+    "name": "forstalabs/atlas-client-php",
+    "description": "A http client for Atlas in PHP",
     "keywords": [
-        "openapitools",
-        "openapi-generator",
-        "openapi",
+        "swagger",
         "php",
         "sdk",
-        "rest",
         "api"
     ],
-    "homepage": "https://openapi-generator.tech",
-    "license": "unlicense",
+    "homepage": "http://swagger.io",
+    "license": "proprietary",
     "authors": [
         {
-            "name": "OpenAPI-Generator contributors",
-            "homepage": "https://openapi-generator.tech"
+            "name": "Swagger and contributors",
+            "homepage": "https://github.com/swagger-api/swagger-codegen"
         }
     ],
     "require": {
-        "php": ">=7.1",
+        "php": ">=5.5",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.4",
+        "phpunit/phpunit": "^4.8",
         "squizlabs/php_codesniffer": "~2.6",
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": { "Swagger\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\" : "test/" }
+        "psr-4": { "Swagger\\Client\\" : "test/" }
     }
 }

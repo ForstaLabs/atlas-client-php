@@ -1,4 +1,4 @@
-# OpenAPI\Client\JoinApi
+# Swagger\Client\JoinApi
 
 All URIs are relative to *https://atlas.forsta.io/v1*
 
@@ -8,9 +8,7 @@ Method | HTTP request | Description
 [**joinRead**](JoinApi.md#joinRead) | **GET** /join/{invitation_token}/ | 
 
 
-
-## joinCreate
-
+# **joinCreate**
 > joinCreate($invitation_token)
 
 
@@ -18,25 +16,22 @@ Method | HTTP request | Description
 Creates an account (and an org for it, optionally).  Body parameters: * captcha [reCaptcha's output] * phone, email, fullname, tag_slug, password [all required except phone] * org_name, org_slug [include if also creating an org]  Fields returned on success: * nametag, orgslug, jwt
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\JoinApi(
+$apiInstance = new Swagger\Client\Api\JoinApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$invitation_token = 'invitation_token_example'; // string | 
+$invitation_token = "invitation_token_example"; // string | 
 
 try {
     $apiInstance->joinCreate($invitation_token);
@@ -48,7 +43,6 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invitation_token** | **string**|  |
@@ -63,16 +57,12 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-
-## joinRead
-
+# **joinRead**
 > joinRead($invitation_token)
 
 
@@ -80,25 +70,22 @@ void (empty response body)
 Retrieves the latest info associated with an invitation  Fields returned: * phone, email, first_name, last_name
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\JoinApi(
+$apiInstance = new Swagger\Client\Api\JoinApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$invitation_token = 'invitation_token_example'; // string | 
+$invitation_token = "invitation_token_example"; // string | 
 
 try {
     $apiInstance->joinRead($invitation_token);
@@ -110,7 +97,6 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invitation_token** | **string**|  |
@@ -125,10 +111,8 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

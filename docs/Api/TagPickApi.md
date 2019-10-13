@@ -1,4 +1,4 @@
-# OpenAPI\Client\TagPickApi
+# Swagger\Client\TagPickApi
 
 All URIs are relative to *https://atlas.forsta.io/v1*
 
@@ -7,34 +7,31 @@ Method | HTTP request | Description
 [**tagPickList**](TagPickApi.md#tagPickList) | **GET** /tag-pick/ | 
 
 
+# **tagPickList**
+> \Swagger\Client\Model\InlineResponse2003 tagPickList($ordering, $search, $page, $page_size)
 
-## tagPickList
 
-> \OpenAPI\Client\Model\InlineResponse2003 tagPickList($ordering, $search, $page, $page_size)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\TagPickApi(
+$apiInstance = new Swagger\Client\Api\TagPickApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ordering = 'ordering_example'; // string | Which field to use when ordering the results.
-$search = 'search_example'; // string | A search term.
+$ordering = "ordering_example"; // string | Which field to use when ordering the results.
+$search = "search_example"; // string | A search term.
 $page = 56; // int | A page number within the paginated result set.
 $page_size = 56; // int | Number of results to return per page.
 
@@ -49,7 +46,6 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ordering** | **string**| Which field to use when ordering the results. | [optional]
@@ -59,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -67,10 +63,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

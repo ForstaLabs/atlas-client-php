@@ -1,4 +1,4 @@
-# OpenAPI\Client\EphemeralUserApi
+# Swagger\Client\EphemeralUserApi
 
 All URIs are relative to *https://atlas.forsta.io/v1*
 
@@ -7,33 +7,30 @@ Method | HTTP request | Description
 [**ephemeralUserCreate**](EphemeralUserApi.md#ephemeralUserCreate) | **POST** /ephemeral-user/ | 
 
 
+# **ephemeralUserCreate**
+> \Swagger\Client\Model\EphemeralUser ephemeralUserCreate($data)
 
-## ephemeralUserCreate
 
-> \OpenAPI\Client\Model\EphemeralUser ephemeralUserCreate($data)
 
 
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
 // Configure API key authorization: JSON Web Token
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-
-$apiInstance = new OpenAPI\Client\Api\EphemeralUserApi(
+$apiInstance = new Swagger\Client\Api\EphemeralUserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \OpenAPI\Client\Model\EphemeralUser(); // \OpenAPI\Client\Model\EphemeralUser | 
+$data = new \Swagger\Client\Model\EphemeralUser(); // \Swagger\Client\Model\EphemeralUser | 
 
 try {
     $result = $apiInstance->ephemeralUserCreate($data);
@@ -46,14 +43,13 @@ try {
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\OpenAPI\Client\Model\EphemeralUser**](../Model/EphemeralUser.md)|  |
+ **data** | [**\Swagger\Client\Model\EphemeralUser**](../Model/EphemeralUser.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EphemeralUser**](../Model/EphemeralUser.md)
+[**\Swagger\Client\Model\EphemeralUser**](../Model/EphemeralUser.md)
 
 ### Authorization
 
@@ -61,10 +57,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

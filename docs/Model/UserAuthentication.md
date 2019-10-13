@@ -1,7 +1,6 @@
-# # UserAuthentication
+# UserAuthentication
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **authtoken** | **string** | For code-based auth. Format: orgslug:userslug:sentcode | [optional] 
@@ -11,6 +10,6 @@ Name | Type | Description | Notes
 **password** | **string** | For password-based auth. | [optional] 
 **otp** | **string** | For multifactor auth. | [optional] 
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

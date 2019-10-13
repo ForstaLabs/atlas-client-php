@@ -1,7 +1,6 @@
-# # User
+# User
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] 
@@ -15,7 +14,7 @@ Name | Type | Description | Notes
 **phone** | **string** |  | [optional] 
 **org** | **string** |  | 
 **tag** | **string** |  | [optional] 
-**tags** | [**\OpenAPI\Client\Model\AssociatedTags[]**](AssociatedTags.md) |  | [optional] 
+**tags** | [**\Swagger\Client\Model\AssociatedTags[]**](AssociatedTags.md) |  | [optional] 
 **address** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
@@ -34,6 +33,6 @@ Name | Type | Description | Notes
 **avatar_url** | **string** |  | [optional] 
 **is_active** | **bool** |  | [optional] [default to true]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 
