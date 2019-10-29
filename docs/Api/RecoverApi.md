@@ -1,17 +1,17 @@
 # Swagger\Client\RecoverApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**recoverEmailRead**](RecoverApi.md#recoverEmailRead) | **GET** /recover/email/{email}/ | 
-[**recoverPhoneRead**](RecoverApi.md#recoverPhoneRead) | **GET** /recover/phone/{phone}/ | 
+[**recoverEmailRead**](RecoverApi.md#recoverEmailRead) | **GET** /recover/email/{email}/ | Sends a list of existing user accounts based on phone number
+[**recoverPhoneRead**](RecoverApi.md#recoverPhoneRead) | **GET** /recover/phone/{phone}/ | Sends a list of existing user accounts based on email
 
 
 # **recoverEmailRead**
-> recoverEmailRead($email)
+> \Swagger\Client\Model\RecoverCredentialsEmailViewResponse recoverEmailRead($email)
 
-
+Sends a list of existing user accounts based on phone number
 
 
 
@@ -34,7 +34,8 @@ $apiInstance = new Swagger\Client\Api\RecoverApi(
 $email = "email_example"; // string | 
 
 try {
-    $apiInstance->recoverEmailRead($email);
+    $result = $apiInstance->recoverEmailRead($email);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecoverApi->recoverEmailRead: ', $e->getMessage(), PHP_EOL;
 }
@@ -49,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\RecoverCredentialsEmailViewResponse**](../Model/RecoverCredentialsEmailViewResponse.md)
 
 ### Authorization
 
@@ -63,9 +64,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **recoverPhoneRead**
-> recoverPhoneRead($phone)
+> \Swagger\Client\Model\RecoverCredentialsPhoneViewResponse recoverPhoneRead($phone)
 
-
+Sends a list of existing user accounts based on email
 
 
 
@@ -88,7 +89,8 @@ $apiInstance = new Swagger\Client\Api\RecoverApi(
 $phone = "phone_example"; // string | 
 
 try {
-    $apiInstance->recoverPhoneRead($phone);
+    $result = $apiInstance->recoverPhoneRead($phone);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecoverApi->recoverPhoneRead: ', $e->getMessage(), PHP_EOL;
 }
@@ -103,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\RecoverCredentialsPhoneViewResponse**](../Model/RecoverCredentialsPhoneViewResponse.md)
 
 ### Authorization
 

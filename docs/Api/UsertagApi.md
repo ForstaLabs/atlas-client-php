@@ -1,6 +1,6 @@
 # Swagger\Client\UsertagApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

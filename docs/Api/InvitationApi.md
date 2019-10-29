@@ -1,17 +1,17 @@
 # Swagger\Client\InvitationApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invitationCreate**](InvitationApi.md#invitationCreate) | **POST** /invitation/ | 
-[**invitationDelete**](InvitationApi.md#invitationDelete) | **DELETE** /invitation/{iid}/ | 
+[**invitationCreate**](InvitationApi.md#invitationCreate) | **POST** /invitation/ | Send an invite to a users phone
+[**invitationDelete**](InvitationApi.md#invitationDelete) | **DELETE** /invitation/{iid}/ | Cancel pending invite
 
 
 # **invitationCreate**
-> invitationCreate()
+> \Swagger\Client\Model\InvitationCreateViewPostResponse invitationCreate($data)
 
-
+Send an invite to a users phone
 
 
 
@@ -31,9 +31,11 @@ $apiInstance = new Swagger\Client\Api\InvitationApi(
     new GuzzleHttp\Client(),
     $config
 );
+$data = new \Swagger\Client\Model\InvitationCreateViewPostRequest(); // \Swagger\Client\Model\InvitationCreateViewPostRequest | 
 
 try {
-    $apiInstance->invitationCreate();
+    $result = $apiInstance->invitationCreate($data);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvitationApi->invitationCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -41,11 +43,14 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**\Swagger\Client\Model\InvitationCreateViewPostRequest**](../Model/InvitationCreateViewPostRequest.md)|  |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InvitationCreateViewPostResponse**](../Model/InvitationCreateViewPostResponse.md)
 
 ### Authorization
 
@@ -61,9 +66,9 @@ void (empty response body)
 # **invitationDelete**
 > invitationDelete($iid)
 
+Cancel pending invite
 
-
-
+Pass the invitation id to cancel a pending invite
 
 ### Example
 ```php

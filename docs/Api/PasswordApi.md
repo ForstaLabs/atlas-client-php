@@ -1,6 +1,6 @@
 # Swagger\Client\PasswordApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **passwordResetCreate**
-> \Swagger\Client\Model\PasswordReset passwordResetCreate($data)
+> \Swagger\Client\Model\PasswordResetViewPostResponse passwordResetCreate($data)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PasswordReset**](../Model/PasswordReset.md)
+[**\Swagger\Client\Model\PasswordResetViewPostResponse**](../Model/PasswordResetViewPostResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **passwordResetUpdate**
-> \Swagger\Client\Model\PasswordResetConfirm passwordResetUpdate($user_id, $data)
+> \Swagger\Client\Model\PasswordResetViewPutResponse passwordResetUpdate($user_id, $data)
 
 
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PasswordResetConfirm**](../Model/PasswordResetConfirm.md)
+[**\Swagger\Client\Model\PasswordResetViewPutResponse**](../Model/PasswordResetViewPutResponse.md)
 
 ### Authorization
 

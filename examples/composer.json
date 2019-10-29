@@ -1,11 +1,13 @@
 {
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/ForstaLabs/atlas-php-client.git"
+    "name": "Example Forsta App",
+    "description": "An example forsta app in php",
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/ForstaLabs/atlas-client-php.git"
+      }
+    ],
+    "require": {
+      "/": "*@dev"
     }
-  ],
-  "require": {
-    "forsta-labs/atlas-php-client": "*@dev"
-  }
 }

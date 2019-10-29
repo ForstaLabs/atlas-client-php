@@ -1,19 +1,19 @@
 # Swagger\Client\DirectoryApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**directoryDomainList**](DirectoryApi.md#directoryDomainList) | **GET** /directory/domain/ | 
-[**directoryUserList**](DirectoryApi.md#directoryUserList) | **GET** /directory/user/ | 
+[**directoryDomainList**](DirectoryApi.md#directoryDomainList) | **GET** /directory/domain/ | A read-only domain directory.
+[**directoryUserList**](DirectoryApi.md#directoryUserList) | **GET** /directory/user/ | A read-only global user directory.
 
 
 # **directoryDomainList**
 > \Swagger\Client\Model\InlineResponse200 directoryDomainList($id, $id_in, $slug, $slug_in, $ordering, $search, $page, $page_size)
 
+A read-only domain directory.
 
-
-A read-only, as light weight as possible, global user directory.
+A read-only, as light weight as possible, global domain directory.
 
 ### Example
 ```php
@@ -80,9 +80,9 @@ Name | Type | Description  | Notes
 # **directoryUserList**
 > \Swagger\Client\Model\InlineResponse2001 directoryUserList($id, $id_in, $slug, $slug_in, $phone, $phone_in, $email, $email_in, $user_type, $is_monitor, $created, $created__gt, $created__gte, $created__lt, $created__lte, $modified, $modified__gt, $modified__gte, $modified__lt, $modified__lte, $ordering, $search, $page, $page_size)
 
+A read-only global user directory.
 
-
-A read-only, as light weight as possible, global user directory. We expose non Org users only if they are _not_ staff or superuser, this is necessary for clients to figure out which users are in orgs and which are not. Because the clients will interact with non-org users that are used for integration purposes.
+A read-only user directory.
 
 ### Example
 ```php

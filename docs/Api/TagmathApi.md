@@ -1,18 +1,18 @@
 # Swagger\Client\TagmathApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tagmathCreate**](TagmathApi.md#tagmathCreate) | **POST** /tagmath/ | 
+[**tagmathCreate**](TagmathApi.md#tagmathCreate) | **POST** /tagmath/ | Request information based on tag expressions
 
 
 # **tagmathCreate**
-> tagmathCreate()
+> \Swagger\Client\Model\BulkTagmathViewResponse tagmathCreate($data)
 
+Request information based on tag expressions
 
-
-
+Pass a list of [tag expressions](https://docs.forsta.io/docs/tag-expressions)                               to this endpoint to retrieve information about each expression.
 
 ### Example
 ```php
@@ -30,9 +30,11 @@ $apiInstance = new Swagger\Client\Api\TagmathApi(
     new GuzzleHttp\Client(),
     $config
 );
+$data = new \Swagger\Client\Model\BulkTagmathViewResponse(); // \Swagger\Client\Model\BulkTagmathViewResponse | 
 
 try {
-    $apiInstance->tagmathCreate();
+    $result = $apiInstance->tagmathCreate($data);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagmathApi->tagmathCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -40,11 +42,14 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**\Swagger\Client\Model\BulkTagmathViewResponse**](../Model/BulkTagmathViewResponse.md)|  |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\BulkTagmathViewResponse**](../Model/BulkTagmathViewResponse.md)
 
 ### Authorization
 

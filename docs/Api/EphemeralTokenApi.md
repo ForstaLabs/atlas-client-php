@@ -1,19 +1,19 @@
 # Swagger\Client\EphemeralTokenApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ephemeralTokenCreate**](EphemeralTokenApi.md#ephemeralTokenCreate) | **POST** /ephemeral-token | 
-[**ephemeralTokenDelete**](EphemeralTokenApi.md#ephemeralTokenDelete) | **DELETE** /ephemeral-token | 
+[**ephemeralTokenCreate**](EphemeralTokenApi.md#ephemeralTokenCreate) | **POST** /ephemeral-token | Retrieve the current ephemeral user token for an org
+[**ephemeralTokenDelete**](EphemeralTokenApi.md#ephemeralTokenDelete) | **DELETE** /ephemeral-token | Deletes the current ephemeral user token for your org
 
 
 # **ephemeralTokenCreate**
-> ephemeralTokenCreate()
+> \Swagger\Client\Model\EphemeralTokenPostResponse ephemeralTokenCreate()
 
+Retrieve the current ephemeral user token for an org
 
-
-
+Retrieve the current ephemeral user token for the organization associated                               with the given JWT.                               The ephemeral token is typically used for creating ephemeral users via                               our [embedded client](https://docs.forsta.io/docs/embedded-client)
 
 ### Example
 ```php
@@ -33,7 +33,8 @@ $apiInstance = new Swagger\Client\Api\EphemeralTokenApi(
 );
 
 try {
-    $apiInstance->ephemeralTokenCreate();
+    $result = $apiInstance->ephemeralTokenCreate();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EphemeralTokenApi->ephemeralTokenCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -45,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\EphemeralTokenPostResponse**](../Model/EphemeralTokenPostResponse.md)
 
 ### Authorization
 
@@ -61,9 +62,9 @@ void (empty response body)
 # **ephemeralTokenDelete**
 > ephemeralTokenDelete()
 
+Deletes the current ephemeral user token for your org
 
-
-
+Sets the ephemeral user token the requestors org to null.
 
 ### Example
 ```php

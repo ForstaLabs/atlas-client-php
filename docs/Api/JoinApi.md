@@ -1,19 +1,19 @@
 # Swagger\Client\JoinApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**joinCreate**](JoinApi.md#joinCreate) | **POST** /join/{invitation_token}/ | 
-[**joinRead**](JoinApi.md#joinRead) | **GET** /join/{invitation_token}/ | 
+[**joinCreate**](JoinApi.md#joinCreate) | **POST** /join/{invitation_token}/ | Creates an account (and an org for it, optionally).
+[**joinRead**](JoinApi.md#joinRead) | **GET** /join/{invitation_token}/ | Retrieves the latest info associated with an invitation
 
 
 # **joinCreate**
-> joinCreate($invitation_token)
+> \Swagger\Client\Model\JoinForstaViewPostResponse joinCreate($invitation_token, $data)
+
+Creates an account (and an org for it, optionally).
 
 
-
-Creates an account (and an org for it, optionally).  Body parameters: * captcha [reCaptcha's output] * phone, email, fullname, tag_slug, password [all required except phone] * org_name, org_slug [include if also creating an org]  Fields returned on success: * nametag, orgslug, jwt
 
 ### Example
 ```php
@@ -32,9 +32,11 @@ $apiInstance = new Swagger\Client\Api\JoinApi(
     $config
 );
 $invitation_token = "invitation_token_example"; // string | 
+$data = new \Swagger\Client\Model\JoinForstaViewPostRequest(); // \Swagger\Client\Model\JoinForstaViewPostRequest | 
 
 try {
-    $apiInstance->joinCreate($invitation_token);
+    $result = $apiInstance->joinCreate($invitation_token, $data);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling JoinApi->joinCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -46,10 +48,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invitation_token** | **string**|  |
+ **data** | [**\Swagger\Client\Model\JoinForstaViewPostRequest**](../Model/JoinForstaViewPostRequest.md)|  |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\JoinForstaViewPostResponse**](../Model/JoinForstaViewPostResponse.md)
 
 ### Authorization
 
@@ -63,11 +66,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **joinRead**
-> joinRead($invitation_token)
+> \Swagger\Client\Model\JoinForstaViewGetResponse joinRead($invitation_token)
 
+Retrieves the latest info associated with an invitation
 
-
-Retrieves the latest info associated with an invitation  Fields returned: * phone, email, first_name, last_name
+Fields returned: * phone, email, first_name, last_name
 
 ### Example
 ```php
@@ -88,7 +91,8 @@ $apiInstance = new Swagger\Client\Api\JoinApi(
 $invitation_token = "invitation_token_example"; // string | 
 
 try {
-    $apiInstance->joinRead($invitation_token);
+    $result = $apiInstance->joinRead($invitation_token);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling JoinApi->joinRead: ', $e->getMessage(), PHP_EOL;
 }
@@ -103,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\JoinForstaViewGetResponse**](../Model/JoinForstaViewGetResponse.md)
 
 ### Authorization
 

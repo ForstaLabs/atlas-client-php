@@ -1,18 +1,18 @@
 # Swagger\Client\EphemeralUserApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ephemeralUserCreate**](EphemeralUserApi.md#ephemeralUserCreate) | **POST** /ephemeral-user/ | 
+[**ephemeralUserCreate**](EphemeralUserApi.md#ephemeralUserCreate) | **POST** /ephemeral-user/ | Create an ephemeral user
 
 
 # **ephemeralUserCreate**
-> \Swagger\Client\Model\EphemeralUser ephemeralUserCreate($data)
+> \Swagger\Client\Model\EphemeralUserViewPostResponse ephemeralUserCreate($data)
 
+Create an ephemeral user
 
-
-
+Pass your orgs ephemeral token and a users personal                               information to this endpoint to create an ephemeral user
 
 ### Example
 ```php
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EphemeralUser**](../Model/EphemeralUser.md)
+[**\Swagger\Client\Model\EphemeralUserViewPostResponse**](../Model/EphemeralUserViewPostResponse.md)
 
 ### Authorization
 

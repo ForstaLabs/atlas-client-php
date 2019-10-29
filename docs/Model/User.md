@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **org** | **string** |  | 
 **tag** | **string** |  | [optional] 
 **tags** | [**\Swagger\Client\Model\AssociatedTags[]**](AssociatedTags.md) |  | [optional] 
-**address** | **string** |  | [optional] 
+**address** | **object** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **permissions** | **string** |  | [optional] 

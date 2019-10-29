@@ -1,18 +1,18 @@
 # Swagger\Client\ApiTokenRefreshApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiTokenRefreshCreate**](ApiTokenRefreshApi.md#apiTokenRefreshCreate) | **POST** /api-token-refresh/ | 
+[**apiTokenRefreshCreate**](ApiTokenRefreshApi.md#apiTokenRefreshCreate) | **POST** /api-token-refresh/ | Returns a refreshed token (with new expiration) based on existing token
 
 
 # **apiTokenRefreshCreate**
 > \Swagger\Client\Model\Refresh apiTokenRefreshCreate($data)
 
+Returns a refreshed token (with new expiration) based on existing token
 
-
-API View that returns a refreshed token (with new expiration) based on existing token  If 'orig_iat' field (original issued-at-time) is found, will first check if it's within expiration window, then copy it to the new token
+If 'orig_iat' field (original issued-at-time) is found, will first check if it's within expiration window, then copy it to the new token
 
 ### Example
 ```php

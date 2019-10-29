@@ -1,6 +1,6 @@
 # Swagger\Client\UserApi
 
-All URIs are relative to *https://atlas.forsta.io/v1*
+All URIs are relative to *http://localhost:8000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -123,11 +123,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userInvite**
-> \Swagger\Client\Model\User userInvite($id, $data)
+> \Swagger\Client\Model\UserInviteResponse userInvite($id)
 
 
 
-API endpoint that allows users to be viewed or edited.
+Send a mobile invite to a user.
 
 ### Example
 ```php
@@ -146,10 +146,9 @@ $apiInstance = new Swagger\Client\Api\UserApi(
     $config
 );
 $id = "id_example"; // string | A UUID string identifying this User.
-$data = new \Swagger\Client\Model\User(); // \Swagger\Client\Model\User | 
 
 try {
-    $result = $apiInstance->userInvite($id, $data);
+    $result = $apiInstance->userInvite($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userInvite: ', $e->getMessage(), PHP_EOL;
@@ -162,11 +161,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**string**](../Model/.md)| A UUID string identifying this User. |
- **data** | [**\Swagger\Client\Model\User**](../Model/User.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\User**](../Model/User.md)
+[**\Swagger\Client\Model\UserInviteResponse**](../Model/UserInviteResponse.md)
 
 ### Authorization
 

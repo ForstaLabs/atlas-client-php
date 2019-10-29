@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **logo** | **string** | Org Logo URL | [optional] 
 **name** | **string** | Organization name | 
 **preferences** | **string** |  | [optional] 
-**address** | **string** |  | [optional] 
-**billing** | **string** |  | [optional] 
+**address** | **object** |  | [optional] 
+**billing** | **object** |  | [optional] 
 **slug** | **string** |  | 
 **slogan** | **string** | Organization slogan | [optional] 
 **website** | **string** | Org website | [optional] 
 **email** | **string** | your_company@domain.com | [optional] 
-**account_control** | **string** |  | [optional] 
+**account_control** | **object** |  | [optional] 
 **sending_allowed** | **bool** |  | [optional] 
 **ephemeral_user_token** | **string** | Token for creating ephemeral users (/@embed client) | [optional] 
 **banner** | **string** | URL of banner image for toolbar header | [optional] 
