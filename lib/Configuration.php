@@ -81,7 +81,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://localhost:8000/v1';
+    protected $host = 'http://atlas.forsta.io/v1';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default
