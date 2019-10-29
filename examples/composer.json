@@ -3,11 +3,11 @@
     "description": "An example forsta app in php",
     "repositories": [
       {
-        "type": "git",
+        "type": "vcs",
         "url": "https://github.com/ForstaLabs/atlas-client-php.git"
       }
     ],
     "require": {
-      "/": "*@dev"
+      "forstalabs/atlas-client-php": "*@dev"
     }
 }

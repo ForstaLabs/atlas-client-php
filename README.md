@@ -24,7 +24,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "/": "*@dev"
+    "forstalabs/atlas-client-php": "*@dev"
   }
 }
 ```
