@@ -1,6 +1,6 @@
 # Swagger\Client\TagPickApi
 
-All URIs are relative to *http://atlas.forsta.io/v1*
+All URIs are relative to *https://atlas.forsta.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
