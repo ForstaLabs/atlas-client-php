@@ -61,7 +61,7 @@ class ConversationUseViewResponse implements ModelInterface, ArrayAccess
         'distribution' => 'string',
         'creator_id' => 'string',
         'org_id' => 'string',
-        'user_ids' => 'string',
+        'user_ids' => 'string[]',
         'expires' => 'string',
         'created' => 'string',
         'jwt' => 'string'
@@ -262,10 +262,6 @@ class ConversationUseViewResponse implements ModelInterface, ArrayAccess
         if ($this->container['user_ids'] === null) {
             $invalidProperties[] = "'user_ids' can't be null";
         }
-        if ((mb_strlen($this->container['user_ids']) < 1)) {
-            $invalidProperties[] = "invalid value for 'user_ids', the character length must be bigger than or equal to 1.";
-        }
-
         if ($this->container['expires'] === null) {
             $invalidProperties[] = "'expires' can't be null";
         }
@@ -421,7 +417,7 @@ class ConversationUseViewResponse implements ModelInterface, ArrayAccess
     /**
      * Gets user_ids
      *
-     * @return string
+     * @return string[]
      */
     public function getUserIds()
     {
@@ -431,17 +427,12 @@ class ConversationUseViewResponse implements ModelInterface, ArrayAccess
     /**
      * Sets user_ids
      *
-     * @param string $user_ids user_ids
+     * @param string[] $user_ids user_ids
      *
      * @return $this
      */
     public function setUserIds($user_ids)
     {
-
-        if ((mb_strlen($user_ids) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $user_ids when calling ConversationUseViewResponse., must be bigger than or equal to 1.');
-        }
-
         $this->container['user_ids'] = $user_ids;
 
         return $this;

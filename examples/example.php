@@ -1,26 +1,38 @@
 <?php
-    require_once(__DIR__ . '/vendor/autoload.php');
+    require_once(__DIR__.'/../vendor/autoload.php');
 
+    // login
     $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', '');
     $apiInstance = new Swagger\Client\Api\LoginApi(
-        // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-        // This is optional, `GuzzleHttp\Client` will be used as default.
         new GuzzleHttp\Client(),
         $config
     );
-    $data = new \Swagger\Client\Model\UserAuthentication(); // \Swagger\Client\Model\UserAuthentication | 
+    $data = new \Swagger\Client\Model\UserAuthentication();
     
-    $fq_tag = 'ben.test:my.organization';
-    $password = 'password5589';
-    
-    $data->setFqTag($fq_tag);
-    $data->setPassword($password);
+    $userauthtoken = 'YOUR_USER_AUTH_TOKEN_HERE';    
+    $data->setUserauthtoken($userauthtoken);
 
     try {
         $result = $apiInstance->loginCreate($data);
         print_r($result);
+        $authedConfig = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'JWT '.$result['token']);
+        $authedApiInstance = new Swagger\Client\Api\UserApi(
+            new GuzzleHttp\Client(),
+            $authedConfig
+        );
+
+        $new_user_data = new \Swagger\Client\Model\User();
+        $new_user_data->setEmail('USER@EMAIL.COM');
+        $new_user_data->setFirstName('FIRST_NAME');
+        $new_user_data->setLastName('LAST_NAME');
+        $new_user_data->setTagSlug('FIRST_NAME.LAST_NAME');
+        
+        $new_user_result = $authedApiInstance->userCreate($new_user_data);
+        print_r($new_user_result);
     } catch (Exception $e) {
-        echo 'Exception when calling LoginApi->loginCreate: ', $e->getMessage(), PHP_EOL;
+        echo 'Exception: ', $e->getMessage(), PHP_EOL;
     }
+
+    
 
 ?>

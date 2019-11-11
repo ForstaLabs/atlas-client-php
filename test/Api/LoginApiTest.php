@@ -84,7 +84,7 @@ class LoginApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for loginSendRead
      *
-     * Returns current authentication method for a particular user.
+     * Returns the current authentication method for the specified user.
      *
      */
     public function testLoginSendRead()

@@ -62,7 +62,6 @@ class Org implements ModelInterface, ArrayAccess
         'name' => 'string',
         'preferences' => 'string',
         'address' => 'object',
-        'billing' => 'object',
         'slug' => 'string',
         'slogan' => 'string',
         'website' => 'string',
@@ -86,7 +85,6 @@ class Org implements ModelInterface, ArrayAccess
         'name' => null,
         'preferences' => null,
         'address' => null,
-        'billing' => null,
         'slug' => null,
         'slogan' => null,
         'website' => 'uri',
@@ -131,7 +129,6 @@ class Org implements ModelInterface, ArrayAccess
         'name' => 'name',
         'preferences' => 'preferences',
         'address' => 'address',
-        'billing' => 'billing',
         'slug' => 'slug',
         'slogan' => 'slogan',
         'website' => 'website',
@@ -155,7 +152,6 @@ class Org implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'preferences' => 'setPreferences',
         'address' => 'setAddress',
-        'billing' => 'setBilling',
         'slug' => 'setSlug',
         'slogan' => 'setSlogan',
         'website' => 'setWebsite',
@@ -179,7 +175,6 @@ class Org implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'preferences' => 'getPreferences',
         'address' => 'getAddress',
-        'billing' => 'getBilling',
         'slug' => 'getSlug',
         'slogan' => 'getSlogan',
         'website' => 'getWebsite',
@@ -257,7 +252,6 @@ class Org implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['billing'] = isset($data['billing']) ? $data['billing'] : null;
         $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['slogan'] = isset($data['slogan']) ? $data['slogan'] : null;
         $this->container['website'] = isset($data['website']) ? $data['website'] : null;
@@ -467,30 +461,6 @@ class Org implements ModelInterface, ArrayAccess
     public function setAddress($address)
     {
         $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets billing
-     *
-     * @return object
-     */
-    public function getBilling()
-    {
-        return $this->container['billing'];
-    }
-
-    /**
-     * Sets billing
-     *
-     * @param object $billing billing
-     *
-     * @return $this
-     */
-    public function setBilling($billing)
-    {
-        $this->container['billing'] = $billing;
 
         return $this;
     }

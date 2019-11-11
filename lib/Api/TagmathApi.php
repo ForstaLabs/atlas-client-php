@@ -92,7 +92,7 @@ class TagmathApi
      *
      * Request information based on tag expressions
      *
-     * @param  \Swagger\Client\Model\BulkTagmathViewResponse $data data (required)
+     * @param  \Swagger\Client\Model\BulkTagmathViewRequest $data data (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,7 +109,7 @@ class TagmathApi
      *
      * Request information based on tag expressions
      *
-     * @param  \Swagger\Client\Model\BulkTagmathViewResponse $data (required)
+     * @param  \Swagger\Client\Model\BulkTagmathViewRequest $data (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -166,7 +166,7 @@ class TagmathApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 201:
+                case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Swagger\Client\Model\BulkTagmathViewResponse',
@@ -184,7 +184,7 @@ class TagmathApi
      *
      * Request information based on tag expressions
      *
-     * @param  \Swagger\Client\Model\BulkTagmathViewResponse $data (required)
+     * @param  \Swagger\Client\Model\BulkTagmathViewRequest $data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,7 +204,7 @@ class TagmathApi
      *
      * Request information based on tag expressions
      *
-     * @param  \Swagger\Client\Model\BulkTagmathViewResponse $data (required)
+     * @param  \Swagger\Client\Model\BulkTagmathViewRequest $data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -254,7 +254,7 @@ class TagmathApi
     /**
      * Create request for operation 'tagmathCreate'
      *
-     * @param  \Swagger\Client\Model\BulkTagmathViewResponse $data (required)
+     * @param  \Swagger\Client\Model\BulkTagmathViewRequest $data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

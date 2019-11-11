@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Create an ephemeral user
 
-Pass your orgs ephemeral token and a users personal                               information to this endpoint to create an ephemeral user
+Pass your orgs ephemeral token and a users personal information to this endpoint to create an ephemeral user.
 
 ### Example
 ```php

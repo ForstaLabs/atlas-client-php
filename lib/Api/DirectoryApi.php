@@ -90,7 +90,7 @@ class DirectoryApi
     /**
      * Operation directoryDomainList
      *
-     * A read-only domain directory.
+     * Global domain directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -114,7 +114,7 @@ class DirectoryApi
     /**
      * Operation directoryDomainListWithHttpInfo
      *
-     * A read-only domain directory.
+     * Global domain directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -196,7 +196,7 @@ class DirectoryApi
     /**
      * Operation directoryDomainListAsync
      *
-     * A read-only domain directory.
+     * Global domain directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -223,7 +223,7 @@ class DirectoryApi
     /**
      * Operation directoryDomainListAsyncWithHttpInfo
      *
-     * A read-only domain directory.
+     * Global domain directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -417,7 +417,7 @@ class DirectoryApi
     /**
      * Operation directoryUserList
      *
-     * A read-only global user directory.
+     * Global user directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -457,7 +457,7 @@ class DirectoryApi
     /**
      * Operation directoryUserListWithHttpInfo
      *
-     * A read-only global user directory.
+     * Global user directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -555,7 +555,7 @@ class DirectoryApi
     /**
      * Operation directoryUserListAsync
      *
-     * A read-only global user directory.
+     * Global user directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)
@@ -598,7 +598,7 @@ class DirectoryApi
     /**
      * Operation directoryUserListAsyncWithHttpInfo
      *
-     * A read-only global user directory.
+     * Global user directory.
      *
      * @param  string $id  (optional)
      * @param  string $id_in Multiple values may be separated by commas. (optional)

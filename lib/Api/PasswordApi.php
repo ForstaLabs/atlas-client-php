@@ -90,6 +90,8 @@ class PasswordApi
     /**
      * Operation passwordResetCreate
      *
+     * Sends email or SMS to a user with a one time token for password resetting.
+     *
      * @param  \Swagger\Client\Model\PasswordReset $data data (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -104,6 +106,8 @@ class PasswordApi
 
     /**
      * Operation passwordResetCreateWithHttpInfo
+     *
+     * Sends email or SMS to a user with a one time token for password resetting.
      *
      * @param  \Swagger\Client\Model\PasswordReset $data (required)
      *
@@ -178,7 +182,7 @@ class PasswordApi
     /**
      * Operation passwordResetCreateAsync
      *
-     * 
+     * Sends email or SMS to a user with a one time token for password resetting.
      *
      * @param  \Swagger\Client\Model\PasswordReset $data (required)
      *
@@ -198,7 +202,7 @@ class PasswordApi
     /**
      * Operation passwordResetCreateAsyncWithHttpInfo
      *
-     * 
+     * Sends email or SMS to a user with a one time token for password resetting.
      *
      * @param  \Swagger\Client\Model\PasswordReset $data (required)
      *
@@ -355,6 +359,8 @@ class PasswordApi
     /**
      * Operation passwordResetUpdate
      *
+     * Confirm the password reset via token.
+     *
      * @param  string $user_id user_id (required)
      * @param  \Swagger\Client\Model\PasswordResetConfirm $data data (required)
      *
@@ -370,6 +376,8 @@ class PasswordApi
 
     /**
      * Operation passwordResetUpdateWithHttpInfo
+     *
+     * Confirm the password reset via token.
      *
      * @param  string $user_id (required)
      * @param  \Swagger\Client\Model\PasswordResetConfirm $data (required)
@@ -445,7 +453,7 @@ class PasswordApi
     /**
      * Operation passwordResetUpdateAsync
      *
-     * 
+     * Confirm the password reset via token.
      *
      * @param  string $user_id (required)
      * @param  \Swagger\Client\Model\PasswordResetConfirm $data (required)
@@ -466,7 +474,7 @@ class PasswordApi
     /**
      * Operation passwordResetUpdateAsyncWithHttpInfo
      *
-     * 
+     * Confirm the password reset via token.
      *
      * @param  string $user_id (required)
      * @param  \Swagger\Client\Model\PasswordResetConfirm $data (required)

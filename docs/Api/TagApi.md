@@ -122,7 +122,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagList**
-> \Swagger\Client\Model\InlineResponse2004 tagList($ordering, $search, $page, $page_size)
+> \Swagger\Client\Model\InlineResponse2004 tagList($slug, $description, $users, $ordering, $search, $page, $page_size)
 
 
 
@@ -144,13 +144,16 @@ $apiInstance = new Swagger\Client\Api\TagApi(
     new GuzzleHttp\Client(),
     $config
 );
+$slug = "slug_example"; // string | 
+$description = "description_example"; // string | 
+$users = "users_example"; // string | 
 $ordering = "ordering_example"; // string | Which field to use when ordering the results.
 $search = "search_example"; // string | A search term.
 $page = 56; // int | A page number within the paginated result set.
 $page_size = 56; // int | Number of results to return per page.
 
 try {
-    $result = $apiInstance->tagList($ordering, $search, $page, $page_size);
+    $result = $apiInstance->tagList($slug, $description, $users, $ordering, $search, $page, $page_size);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagApi->tagList: ', $e->getMessage(), PHP_EOL;
@@ -162,6 +165,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **slug** | **string**|  | [optional]
+ **description** | **string**|  | [optional]
+ **users** | **string**|  | [optional]
  **ordering** | **string**| Which field to use when ordering the results. | [optional]
  **search** | **string**| A search term. | [optional]
  **page** | **int**| A page number within the paginated result set. | [optional]

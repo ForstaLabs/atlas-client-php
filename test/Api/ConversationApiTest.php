@@ -82,12 +82,12 @@ class ConversationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for conversationCreate_0
+     * Test case for conversationEdit
      *
      * Facilitates placing a user into a Conversation specified by its token..
      *
      */
-    public function testConversationCreate0()
+    public function testConversationEdit()
     {
     }
 

@@ -5,7 +5,7 @@ All URIs are relative to *https://atlas.forsta.io/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**loginCreate**](LoginApi.md#loginCreate) | **POST** /login/ | Returns a JWT based on password, otp, or authtoken login mechanisms
-[**loginSendRead**](LoginApi.md#loginSendRead) | **GET** /login/send/{org}/{tag_slug}/ | Returns current authentication method for a particular user
+[**loginSendRead**](LoginApi.md#loginSendRead) | **GET** /login/send/{org}/{tag_slug}/ | Returns the current authentication method for the specified user
 
 
 # **loginCreate**
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Returns a JWT based on password, otp, or authtoken login mechanisms
 
-Send valid login credentials, one-time password, or user            authtoken to this endpoint to recieve a valid JWT. This JWT can be used to make            authenticated requests to atlas on behalf of the authenticating user.
+Send valid login credentials, one-time password, or user authtoken to this endpoint to recieve a valid JWT. This JWT can be used to make authenticated requests to atlas on behalf of the authenticating user.
 
 ### Example
 ```php
@@ -64,11 +64,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **loginSendRead**
-> loginSendRead($org, $tag_slug)
+> \Swagger\Client\Model\UserLoginSend loginSendRead($org, $tag_slug)
 
-Returns current authentication method for a particular user
+Returns the current authentication method for the specified user
 
-Returns current authentication method for a particular user, or                               sends a login code to their email if password/totp auth is not                               yet configured
+Returns current authentication method for the user associated with the tag @tag_slug:org, or sends an account authorization code to their email if password/totp auth is not yet configured
 
 ### Example
 ```php
@@ -90,7 +90,8 @@ $org = "org_example"; // string |
 $tag_slug = "tag_slug_example"; // string | 
 
 try {
-    $apiInstance->loginSendRead($org, $tag_slug);
+    $result = $apiInstance->loginSendRead($org, $tag_slug);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LoginApi->loginSendRead: ', $e->getMessage(), PHP_EOL;
 }
@@ -106,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\UserLoginSend**](../Model/UserLoginSend.md)
 
 ### Authorization
 

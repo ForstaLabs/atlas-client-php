@@ -74,7 +74,7 @@ class RecoverApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for recoverEmailRead
      *
-     * Sends a list of existing user accounts based on phone number.
+     * Sends a list of existing accounts to a users email.
      *
      */
     public function testRecoverEmailRead()
@@ -84,7 +84,7 @@ class RecoverApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for recoverPhoneRead
      *
-     * Sends a list of existing user accounts based on email.
+     * Sends a list of existing user accounts based on phone number.
      *
      */
     public function testRecoverPhoneRead()

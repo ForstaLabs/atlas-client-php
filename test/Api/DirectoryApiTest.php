@@ -74,7 +74,7 @@ class DirectoryApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for directoryDomainList
      *
-     * A read-only domain directory..
+     * Global domain directory..
      *
      */
     public function testDirectoryDomainList()
@@ -84,7 +84,7 @@ class DirectoryApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for directoryUserList
      *
-     * A read-only global user directory..
+     * Global user directory..
      *
      */
     public function testDirectoryUserList()

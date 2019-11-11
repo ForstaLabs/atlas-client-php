@@ -588,6 +588,9 @@ class UsertagApi
     /**
      * Operation usertagList
      *
+     * @param  string $association_type  (optional)
+     * @param  string $tag_id  (optional)
+     * @param  string $user_id  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -597,15 +600,18 @@ class UsertagApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\InlineResponse2006
      */
-    public function usertagList($ordering = null, $search = null, $page = null, $page_size = null)
+    public function usertagList($association_type = null, $tag_id = null, $user_id = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
-        list($response) = $this->usertagListWithHttpInfo($ordering, $search, $page, $page_size);
+        list($response) = $this->usertagListWithHttpInfo($association_type, $tag_id, $user_id, $ordering, $search, $page, $page_size);
         return $response;
     }
 
     /**
      * Operation usertagListWithHttpInfo
      *
+     * @param  string $association_type  (optional)
+     * @param  string $tag_id  (optional)
+     * @param  string $user_id  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -615,10 +621,10 @@ class UsertagApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
-    public function usertagListWithHttpInfo($ordering = null, $search = null, $page = null, $page_size = null)
+    public function usertagListWithHttpInfo($association_type = null, $tag_id = null, $user_id = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
         $returnType = '\Swagger\Client\Model\InlineResponse2006';
-        $request = $this->usertagListRequest($ordering, $search, $page, $page_size);
+        $request = $this->usertagListRequest($association_type, $tag_id, $user_id, $ordering, $search, $page, $page_size);
 
         try {
             $options = $this->createHttpClientOption();
@@ -684,6 +690,9 @@ class UsertagApi
      *
      * 
      *
+     * @param  string $association_type  (optional)
+     * @param  string $tag_id  (optional)
+     * @param  string $user_id  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -692,9 +701,9 @@ class UsertagApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function usertagListAsync($ordering = null, $search = null, $page = null, $page_size = null)
+    public function usertagListAsync($association_type = null, $tag_id = null, $user_id = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
-        return $this->usertagListAsyncWithHttpInfo($ordering, $search, $page, $page_size)
+        return $this->usertagListAsyncWithHttpInfo($association_type, $tag_id, $user_id, $ordering, $search, $page, $page_size)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -707,6 +716,9 @@ class UsertagApi
      *
      * 
      *
+     * @param  string $association_type  (optional)
+     * @param  string $tag_id  (optional)
+     * @param  string $user_id  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -715,10 +727,10 @@ class UsertagApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function usertagListAsyncWithHttpInfo($ordering = null, $search = null, $page = null, $page_size = null)
+    public function usertagListAsyncWithHttpInfo($association_type = null, $tag_id = null, $user_id = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
         $returnType = '\Swagger\Client\Model\InlineResponse2006';
-        $request = $this->usertagListRequest($ordering, $search, $page, $page_size);
+        $request = $this->usertagListRequest($association_type, $tag_id, $user_id, $ordering, $search, $page, $page_size);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -760,6 +772,9 @@ class UsertagApi
     /**
      * Create request for operation 'usertagList'
      *
+     * @param  string $association_type  (optional)
+     * @param  string $tag_id  (optional)
+     * @param  string $user_id  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -768,7 +783,7 @@ class UsertagApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function usertagListRequest($ordering = null, $search = null, $page = null, $page_size = null)
+    protected function usertagListRequest($association_type = null, $tag_id = null, $user_id = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
 
         $resourcePath = '/usertag/';
@@ -778,6 +793,18 @@ class UsertagApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($association_type !== null) {
+            $queryParams['association_type'] = ObjectSerializer::toQueryValue($association_type);
+        }
+        // query params
+        if ($tag_id !== null) {
+            $queryParams['tag_id'] = ObjectSerializer::toQueryValue($tag_id);
+        }
+        // query params
+        if ($user_id !== null) {
+            $queryParams['user_id'] = ObjectSerializer::toQueryValue($user_id);
+        }
         // query params
         if ($ordering !== null) {
             $queryParams['ordering'] = ObjectSerializer::toQueryValue($ordering);

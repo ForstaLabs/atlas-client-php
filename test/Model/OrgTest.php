@@ -112,13 +112,6 @@ class OrgTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "billing"
-     */
-    public function testPropertyBilling()
-    {
-    }
-
-    /**
      * Test attribute "slug"
      */
     public function testPropertySlug()

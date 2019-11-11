@@ -357,7 +357,7 @@ class ConversationApi
     }
 
     /**
-     * Operation conversationCreate_0
+     * Operation conversationEdit
      *
      * Facilitates placing a user into a Conversation specified by its token.
      *
@@ -368,14 +368,14 @@ class ConversationApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\ConversationUseViewResponse
      */
-    public function conversationCreate_0($conversation_token, $data)
+    public function conversationEdit($conversation_token, $data)
     {
-        list($response) = $this->conversationCreate_0WithHttpInfo($conversation_token, $data);
+        list($response) = $this->conversationEditWithHttpInfo($conversation_token, $data);
         return $response;
     }
 
     /**
-     * Operation conversationCreate_0WithHttpInfo
+     * Operation conversationEditWithHttpInfo
      *
      * Facilitates placing a user into a Conversation specified by its token.
      *
@@ -386,10 +386,10 @@ class ConversationApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ConversationUseViewResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationCreate_0WithHttpInfo($conversation_token, $data)
+    public function conversationEditWithHttpInfo($conversation_token, $data)
     {
         $returnType = '\Swagger\Client\Model\ConversationUseViewResponse';
-        $request = $this->conversationCreate_0Request($conversation_token, $data);
+        $request = $this->conversationEditRequest($conversation_token, $data);
 
         try {
             $options = $this->createHttpClientOption();
@@ -451,7 +451,7 @@ class ConversationApi
     }
 
     /**
-     * Operation conversationCreate_0Async
+     * Operation conversationEditAsync
      *
      * Facilitates placing a user into a Conversation specified by its token.
      *
@@ -461,9 +461,9 @@ class ConversationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function conversationCreate_0Async($conversation_token, $data)
+    public function conversationEditAsync($conversation_token, $data)
     {
-        return $this->conversationCreate_0AsyncWithHttpInfo($conversation_token, $data)
+        return $this->conversationEditAsyncWithHttpInfo($conversation_token, $data)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -472,7 +472,7 @@ class ConversationApi
     }
 
     /**
-     * Operation conversationCreate_0AsyncWithHttpInfo
+     * Operation conversationEditAsyncWithHttpInfo
      *
      * Facilitates placing a user into a Conversation specified by its token.
      *
@@ -482,10 +482,10 @@ class ConversationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function conversationCreate_0AsyncWithHttpInfo($conversation_token, $data)
+    public function conversationEditAsyncWithHttpInfo($conversation_token, $data)
     {
         $returnType = '\Swagger\Client\Model\ConversationUseViewResponse';
-        $request = $this->conversationCreate_0Request($conversation_token, $data);
+        $request = $this->conversationEditRequest($conversation_token, $data);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -525,7 +525,7 @@ class ConversationApi
     }
 
     /**
-     * Create request for operation 'conversationCreate_0'
+     * Create request for operation 'conversationEdit'
      *
      * @param  string $conversation_token (required)
      * @param  \Swagger\Client\Model\ConversationUseViewRequest $data (required)
@@ -533,18 +533,18 @@ class ConversationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function conversationCreate_0Request($conversation_token, $data)
+    protected function conversationEditRequest($conversation_token, $data)
     {
         // verify the required parameter 'conversation_token' is set
         if ($conversation_token === null || (is_array($conversation_token) && count($conversation_token) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $conversation_token when calling conversationCreate_0'
+                'Missing the required parameter $conversation_token when calling conversationEdit'
             );
         }
         // verify the required parameter 'data' is set
         if ($data === null || (is_array($data) && count($data) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $data when calling conversationCreate_0'
+                'Missing the required parameter $data when calling conversationEdit'
             );
         }
 

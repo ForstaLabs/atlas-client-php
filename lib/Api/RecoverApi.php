@@ -90,7 +90,7 @@ class RecoverApi
     /**
      * Operation recoverEmailRead
      *
-     * Sends a list of existing user accounts based on phone number
+     * Sends a list of existing accounts to a users email
      *
      * @param  string $email email (required)
      *
@@ -107,7 +107,7 @@ class RecoverApi
     /**
      * Operation recoverEmailReadWithHttpInfo
      *
-     * Sends a list of existing user accounts based on phone number
+     * Sends a list of existing accounts to a users email
      *
      * @param  string $email (required)
      *
@@ -182,7 +182,7 @@ class RecoverApi
     /**
      * Operation recoverEmailReadAsync
      *
-     * Sends a list of existing user accounts based on phone number
+     * Sends a list of existing accounts to a users email
      *
      * @param  string $email (required)
      *
@@ -202,7 +202,7 @@ class RecoverApi
     /**
      * Operation recoverEmailReadAsyncWithHttpInfo
      *
-     * Sends a list of existing user accounts based on phone number
+     * Sends a list of existing accounts to a users email
      *
      * @param  string $email (required)
      *
@@ -364,7 +364,7 @@ class RecoverApi
     /**
      * Operation recoverPhoneRead
      *
-     * Sends a list of existing user accounts based on email
+     * Sends a list of existing user accounts based on phone number
      *
      * @param  string $phone phone (required)
      *
@@ -381,7 +381,7 @@ class RecoverApi
     /**
      * Operation recoverPhoneReadWithHttpInfo
      *
-     * Sends a list of existing user accounts based on email
+     * Sends a list of existing user accounts based on phone number
      *
      * @param  string $phone (required)
      *
@@ -456,7 +456,7 @@ class RecoverApi
     /**
      * Operation recoverPhoneReadAsync
      *
-     * Sends a list of existing user accounts based on email
+     * Sends a list of existing user accounts based on phone number
      *
      * @param  string $phone (required)
      *
@@ -476,7 +476,7 @@ class RecoverApi
     /**
      * Operation recoverPhoneReadAsyncWithHttpInfo
      *
-     * Sends a list of existing user accounts based on email
+     * Sends a list of existing user accounts based on phone number
      *
      * @param  string $phone (required)
      *

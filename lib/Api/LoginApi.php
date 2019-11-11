@@ -359,35 +359,36 @@ class LoginApi
     /**
      * Operation loginSendRead
      *
-     * Returns current authentication method for a particular user
+     * Returns the current authentication method for the specified user
      *
      * @param  string $org org (required)
      * @param  string $tag_slug tag_slug (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \Swagger\Client\Model\UserLoginSend
      */
     public function loginSendRead($org, $tag_slug)
     {
-        $this->loginSendReadWithHttpInfo($org, $tag_slug);
+        list($response) = $this->loginSendReadWithHttpInfo($org, $tag_slug);
+        return $response;
     }
 
     /**
      * Operation loginSendReadWithHttpInfo
      *
-     * Returns current authentication method for a particular user
+     * Returns the current authentication method for the specified user
      *
      * @param  string $org (required)
      * @param  string $tag_slug (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UserLoginSend, HTTP status code, HTTP response headers (array of strings)
      */
     public function loginSendReadWithHttpInfo($org, $tag_slug)
     {
-        $returnType = '';
+        $returnType = '\Swagger\Client\Model\UserLoginSend';
         $request = $this->loginSendReadRequest($org, $tag_slug);
 
         try {
@@ -418,10 +419,32 @@ class LoginApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\UserLoginSend',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -430,7 +453,7 @@ class LoginApi
     /**
      * Operation loginSendReadAsync
      *
-     * Returns current authentication method for a particular user
+     * Returns the current authentication method for the specified user
      *
      * @param  string $org (required)
      * @param  string $tag_slug (required)
@@ -451,7 +474,7 @@ class LoginApi
     /**
      * Operation loginSendReadAsyncWithHttpInfo
      *
-     * Returns current authentication method for a particular user
+     * Returns the current authentication method for the specified user
      *
      * @param  string $org (required)
      * @param  string $tag_slug (required)
@@ -461,14 +484,28 @@ class LoginApi
      */
     public function loginSendReadAsyncWithHttpInfo($org, $tag_slug)
     {
-        $returnType = '';
+        $returnType = '\Swagger\Client\Model\UserLoginSend';
         $request = $this->loginSendReadRequest($org, $tag_slug);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();

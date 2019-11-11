@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **middle_name** | **string** |  | [optional] 
 **last_name** | **string** |  | [optional] 
 **phone** | **string** |  | [optional] 
-**org** | **string** |  | 
-**tag** | **string** |  | [optional] 
+**org** | [**\Swagger\Client\Model\Org2**](Org2.md) |  | 
+**tag** | [**\Swagger\Client\Model\Tag2**](Tag2.md) |  | [optional] 
 **tags** | [**\Swagger\Client\Model\AssociatedTags[]**](AssociatedTags.md) |  | [optional] 
 **address** | **object** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 

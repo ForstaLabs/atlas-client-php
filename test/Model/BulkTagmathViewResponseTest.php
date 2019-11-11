@@ -77,9 +77,9 @@ class BulkTagmathViewResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "expressions"
+     * Test attribute "results"
      */
-    public function testPropertyExpressions()
+    public function testPropertyResults()
     {
     }
 }

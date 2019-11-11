@@ -74,7 +74,7 @@ class EphemeralTokenApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ephemeralTokenCreate
      *
-     * Retrieve the current ephemeral user token for an org.
+     * Retrieves the ephemeral user token.
      *
      */
     public function testEphemeralTokenCreate()
@@ -84,7 +84,7 @@ class EphemeralTokenApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ephemeralTokenDelete
      *
-     * Deletes the current ephemeral user token for your org.
+     * Delete the ephemeral user token.
      *
      */
     public function testEphemeralTokenDelete()

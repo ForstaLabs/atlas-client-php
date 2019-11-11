@@ -193,7 +193,7 @@ class ConversationCreate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['captcha'] = isset($data['captcha']) ? $data['captcha'] : null;
-        $this->container['thread_id'] = isset($data['thread_id']) ? $data['thread_id'] : 'fb103454-7dad-41b7-843b-99d8b47786c5';
+        $this->container['thread_id'] = isset($data['thread_id']) ? $data['thread_id'] : '805284d0-c38e-4bc8-b990-78e9e732cd49';
         $this->container['distribution'] = isset($data['distribution']) ? $data['distribution'] : null;
         $this->container['expires'] = isset($data['expires']) ? $data['expires'] : null;
     }

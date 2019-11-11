@@ -596,7 +596,7 @@ class UserauthtokenApi
     /**
      * Operation userauthtokenList
      *
-     * Retrieve a list of auth tokens for a specified user
+     * Retrieve the list of auth tokens for a specified user
      *
      * @param  string $userid userid (required)
      *
@@ -613,7 +613,7 @@ class UserauthtokenApi
     /**
      * Operation userauthtokenListWithHttpInfo
      *
-     * Retrieve a list of auth tokens for a specified user
+     * Retrieve the list of auth tokens for a specified user
      *
      * @param  string $userid (required)
      *
@@ -688,7 +688,7 @@ class UserauthtokenApi
     /**
      * Operation userauthtokenListAsync
      *
-     * Retrieve a list of auth tokens for a specified user
+     * Retrieve the list of auth tokens for a specified user
      *
      * @param  string $userid (required)
      *
@@ -708,7 +708,7 @@ class UserauthtokenApi
     /**
      * Operation userauthtokenListAsyncWithHttpInfo
      *
-     * Retrieve a list of auth tokens for a specified user
+     * Retrieve the list of auth tokens for a specified user
      *
      * @param  string $userid (required)
      *

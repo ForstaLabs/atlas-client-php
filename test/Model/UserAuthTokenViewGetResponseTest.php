@@ -110,4 +110,11 @@ class UserAuthTokenViewGetResponseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyExpires()
     {
     }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
 }

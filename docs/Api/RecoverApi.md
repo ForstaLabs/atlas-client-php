@@ -4,14 +4,14 @@ All URIs are relative to *https://atlas.forsta.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**recoverEmailRead**](RecoverApi.md#recoverEmailRead) | **GET** /recover/email/{email}/ | Sends a list of existing user accounts based on phone number
-[**recoverPhoneRead**](RecoverApi.md#recoverPhoneRead) | **GET** /recover/phone/{phone}/ | Sends a list of existing user accounts based on email
+[**recoverEmailRead**](RecoverApi.md#recoverEmailRead) | **GET** /recover/email/{email}/ | Sends a list of existing accounts to a users email
+[**recoverPhoneRead**](RecoverApi.md#recoverPhoneRead) | **GET** /recover/phone/{phone}/ | Sends a list of existing user accounts based on phone number
 
 
 # **recoverEmailRead**
 > \Swagger\Client\Model\RecoverCredentialsEmailViewResponse recoverEmailRead($email)
 
-Sends a list of existing user accounts based on phone number
+Sends a list of existing accounts to a users email
 
 
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **recoverPhoneRead**
 > \Swagger\Client\Model\RecoverCredentialsPhoneViewResponse recoverPhoneRead($phone)
 
-Sends a list of existing user accounts based on email
+Sends a list of existing user accounts based on phone number
 
 
 

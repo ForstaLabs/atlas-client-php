@@ -94,7 +94,7 @@ class UserauthtokenApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for userauthtokenList
      *
-     * Retrieve a list of auth tokens for a specified user.
+     * Retrieve the list of auth tokens for a specified user.
      *
      */
     public function testUserauthtokenList()

@@ -5,7 +5,7 @@ All URIs are relative to *https://atlas.forsta.io/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**conversationCreate**](ConversationApi.md#conversationCreate) | **POST** /conversation/ | Creates a conversation token.
-[**conversationCreate_0**](ConversationApi.md#conversationCreate_0) | **POST** /conversation/{conversation_token}/ | Facilitates placing a user into a Conversation specified by its token.
+[**conversationEdit**](ConversationApi.md#conversationEdit) | **POST** /conversation/{conversation_token}/ | Facilitates placing a user into a Conversation specified by its token.
 [**conversationRead**](ConversationApi.md#conversationRead) | **GET** /conversation/{conversation_token}/ | Returns information about a conversation (if the requestor is the creator).
 
 
@@ -64,8 +64,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationCreate_0**
-> \Swagger\Client\Model\ConversationUseViewResponse conversationCreate_0($conversation_token, $data)
+# **conversationEdit**
+> \Swagger\Client\Model\ConversationUseViewResponse conversationEdit($conversation_token, $data)
 
 Facilitates placing a user into a Conversation specified by its token.
 
@@ -91,10 +91,10 @@ $conversation_token = "conversation_token_example"; // string |
 $data = new \Swagger\Client\Model\ConversationUseViewRequest(); // \Swagger\Client\Model\ConversationUseViewRequest | 
 
 try {
-    $result = $apiInstance->conversationCreate_0($conversation_token, $data);
+    $result = $apiInstance->conversationEdit($conversation_token, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationApi->conversationCreate_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationApi->conversationEdit: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**userauthtokenCreate**](UserauthtokenApi.md#userauthtokenCreate) | **POST** /userauthtoken/ | Create an auth token
 [**userauthtokenDelete**](UserauthtokenApi.md#userauthtokenDelete) | **DELETE** /userauthtoken/{id}/ | Delete a token based on token id
-[**userauthtokenList**](UserauthtokenApi.md#userauthtokenList) | **GET** /userauthtoken/ | Retrieve a list of auth tokens for a specified user
+[**userauthtokenList**](UserauthtokenApi.md#userauthtokenList) | **GET** /userauthtoken/ | Retrieve the list of auth tokens for a specified user
 
 
 # **userauthtokenCreate**
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Create an auth token
 
-Auth tokens are authentication secrets for a particular user. Pass                               a user id and token description to this endpoint and recieve a secret                               token in response
+Auth tokens are authentication secrets for a particular user. Pass a user id and token description to this endpoint and recieve a secret token in response
 
 ### Example
 ```php
@@ -121,9 +121,9 @@ void (empty response body)
 # **userauthtokenList**
 > \Swagger\Client\Model\UserAuthTokenViewGetResponse[] userauthtokenList($userid)
 
-Retrieve a list of auth tokens for a specified user
+Retrieve the list of auth tokens for a specified user
 
-Pass a userid to this endpoint to get the list of authtokens                               for that user. Each token will have an id and description.
+Pass a userid to this endpoint to get the list of authtokens for that user. Each token will have an id and description.
 
 ### Example
 ```php

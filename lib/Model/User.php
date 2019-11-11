@@ -66,8 +66,8 @@ class User implements ModelInterface, ArrayAccess
         'middle_name' => 'string',
         'last_name' => 'string',
         'phone' => 'string',
-        'org' => 'string',
-        'tag' => 'string',
+        'org' => '\Swagger\Client\Model\Org2',
+        'tag' => '\Swagger\Client\Model\Tag2',
         'tags' => '\Swagger\Client\Model\AssociatedTags[]',
         'address' => 'object',
         'created' => '\DateTime',
@@ -686,7 +686,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets org
      *
-     * @return string
+     * @return \Swagger\Client\Model\Org2
      */
     public function getOrg()
     {
@@ -696,7 +696,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets org
      *
-     * @param string $org org
+     * @param \Swagger\Client\Model\Org2 $org org
      *
      * @return $this
      */
@@ -710,7 +710,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets tag
      *
-     * @return string
+     * @return \Swagger\Client\Model\Tag2
      */
     public function getTag()
     {
@@ -720,7 +720,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets tag
      *
-     * @param string $tag tag
+     * @param \Swagger\Client\Model\Tag2 $tag tag
      *
      * @return $this
      */

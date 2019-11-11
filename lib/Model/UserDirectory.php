@@ -58,14 +58,14 @@ class UserDirectory implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'tag' => 'string',
+        'tag' => '\Swagger\Client\Model\Tag1',
         'gravatar_hash' => 'string',
         'user_type' => 'string',
         'is_monitor' => 'bool',
         'first_name' => 'string',
         'last_name' => 'string',
         'is_active' => 'bool',
-        'org' => 'string',
+        'org' => '\Swagger\Client\Model\Org1',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'avatar_url' => 'string'
@@ -340,7 +340,7 @@ class UserDirectory implements ModelInterface, ArrayAccess
     /**
      * Gets tag
      *
-     * @return string
+     * @return \Swagger\Client\Model\Tag1
      */
     public function getTag()
     {
@@ -350,7 +350,7 @@ class UserDirectory implements ModelInterface, ArrayAccess
     /**
      * Sets tag
      *
-     * @param string $tag tag
+     * @param \Swagger\Client\Model\Tag1 $tag tag
      *
      * @return $this
      */
@@ -527,7 +527,7 @@ class UserDirectory implements ModelInterface, ArrayAccess
     /**
      * Gets org
      *
-     * @return string
+     * @return \Swagger\Client\Model\Org1
      */
     public function getOrg()
     {
@@ -537,7 +537,7 @@ class UserDirectory implements ModelInterface, ArrayAccess
     /**
      * Sets org
      *
-     * @param string $org org
+     * @param \Swagger\Client\Model\Org1 $org org
      *
      * @return $this
      */

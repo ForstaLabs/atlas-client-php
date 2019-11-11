@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **name** | **string** | Organization name | 
 **preferences** | **string** |  | [optional] 
 **address** | **object** |  | [optional] 
-**billing** | **object** |  | [optional] 
 **slug** | **string** |  | 
 **slogan** | **string** | Organization slogan | [optional] 
 **website** | **string** | Org website | [optional] 

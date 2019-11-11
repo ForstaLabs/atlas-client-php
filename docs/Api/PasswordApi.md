@@ -4,16 +4,16 @@ All URIs are relative to *https://atlas.forsta.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**passwordResetCreate**](PasswordApi.md#passwordResetCreate) | **POST** /password/reset/ | 
-[**passwordResetUpdate**](PasswordApi.md#passwordResetUpdate) | **PUT** /password/reset/{user_id}/ | 
+[**passwordResetCreate**](PasswordApi.md#passwordResetCreate) | **POST** /password/reset/ | Sends email or SMS to a user with a one time token for password resetting.
+[**passwordResetUpdate**](PasswordApi.md#passwordResetUpdate) | **PUT** /password/reset/{user_id}/ | Confirm the password reset via token.
 
 
 # **passwordResetCreate**
 > \Swagger\Client\Model\PasswordResetViewPostResponse passwordResetCreate($data)
 
-
-
 Sends email or SMS to a user with a one time token for password resetting.
+
+Possible values for method field: \"email\", \"sms\"
 
 ### Example
 ```php
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **passwordResetUpdate**
 > \Swagger\Client\Model\PasswordResetViewPutResponse passwordResetUpdate($user_id, $data)
 
-
+Confirm the password reset via token.
 
 Confirm the password reset via token.
 

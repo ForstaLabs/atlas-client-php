@@ -90,7 +90,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenCreate
      *
-     * Retrieve the current ephemeral user token for an org
+     * Retrieves the ephemeral user token
      *
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -106,7 +106,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenCreateWithHttpInfo
      *
-     * Retrieve the current ephemeral user token for an org
+     * Retrieves the ephemeral user token
      *
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -180,7 +180,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenCreateAsync
      *
-     * Retrieve the current ephemeral user token for an org
+     * Retrieves the ephemeral user token
      *
      *
      * @throws \InvalidArgumentException
@@ -199,7 +199,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenCreateAsyncWithHttpInfo
      *
-     * Retrieve the current ephemeral user token for an org
+     * Retrieves the ephemeral user token
      *
      *
      * @throws \InvalidArgumentException
@@ -345,7 +345,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenDelete
      *
-     * Deletes the current ephemeral user token for your org
+     * Delete the ephemeral user token
      *
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -360,7 +360,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenDeleteWithHttpInfo
      *
-     * Deletes the current ephemeral user token for your org
+     * Delete the ephemeral user token
      *
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -412,7 +412,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenDeleteAsync
      *
-     * Deletes the current ephemeral user token for your org
+     * Delete the ephemeral user token
      *
      *
      * @throws \InvalidArgumentException
@@ -431,7 +431,7 @@ class EphemeralTokenApi
     /**
      * Operation ephemeralTokenDeleteAsyncWithHttpInfo
      *
-     * Deletes the current ephemeral user token for your org
+     * Delete the ephemeral user token
      *
      *
      * @throws \InvalidArgumentException

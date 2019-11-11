@@ -588,6 +588,9 @@ class TagApi
     /**
      * Operation tagList
      *
+     * @param  string $slug  (optional)
+     * @param  string $description  (optional)
+     * @param  string $users  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -597,15 +600,18 @@ class TagApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\InlineResponse2004
      */
-    public function tagList($ordering = null, $search = null, $page = null, $page_size = null)
+    public function tagList($slug = null, $description = null, $users = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
-        list($response) = $this->tagListWithHttpInfo($ordering, $search, $page, $page_size);
+        list($response) = $this->tagListWithHttpInfo($slug, $description, $users, $ordering, $search, $page, $page_size);
         return $response;
     }
 
     /**
      * Operation tagListWithHttpInfo
      *
+     * @param  string $slug  (optional)
+     * @param  string $description  (optional)
+     * @param  string $users  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -615,10 +621,10 @@ class TagApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function tagListWithHttpInfo($ordering = null, $search = null, $page = null, $page_size = null)
+    public function tagListWithHttpInfo($slug = null, $description = null, $users = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
         $returnType = '\Swagger\Client\Model\InlineResponse2004';
-        $request = $this->tagListRequest($ordering, $search, $page, $page_size);
+        $request = $this->tagListRequest($slug, $description, $users, $ordering, $search, $page, $page_size);
 
         try {
             $options = $this->createHttpClientOption();
@@ -684,6 +690,9 @@ class TagApi
      *
      * 
      *
+     * @param  string $slug  (optional)
+     * @param  string $description  (optional)
+     * @param  string $users  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -692,9 +701,9 @@ class TagApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function tagListAsync($ordering = null, $search = null, $page = null, $page_size = null)
+    public function tagListAsync($slug = null, $description = null, $users = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
-        return $this->tagListAsyncWithHttpInfo($ordering, $search, $page, $page_size)
+        return $this->tagListAsyncWithHttpInfo($slug, $description, $users, $ordering, $search, $page, $page_size)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -707,6 +716,9 @@ class TagApi
      *
      * 
      *
+     * @param  string $slug  (optional)
+     * @param  string $description  (optional)
+     * @param  string $users  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -715,10 +727,10 @@ class TagApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function tagListAsyncWithHttpInfo($ordering = null, $search = null, $page = null, $page_size = null)
+    public function tagListAsyncWithHttpInfo($slug = null, $description = null, $users = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
         $returnType = '\Swagger\Client\Model\InlineResponse2004';
-        $request = $this->tagListRequest($ordering, $search, $page, $page_size);
+        $request = $this->tagListRequest($slug, $description, $users, $ordering, $search, $page, $page_size);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -760,6 +772,9 @@ class TagApi
     /**
      * Create request for operation 'tagList'
      *
+     * @param  string $slug  (optional)
+     * @param  string $description  (optional)
+     * @param  string $users  (optional)
      * @param  string $ordering Which field to use when ordering the results. (optional)
      * @param  string $search A search term. (optional)
      * @param  int $page A page number within the paginated result set. (optional)
@@ -768,7 +783,7 @@ class TagApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function tagListRequest($ordering = null, $search = null, $page = null, $page_size = null)
+    protected function tagListRequest($slug = null, $description = null, $users = null, $ordering = null, $search = null, $page = null, $page_size = null)
     {
 
         $resourcePath = '/tag/';
@@ -778,6 +793,18 @@ class TagApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($slug !== null) {
+            $queryParams['slug'] = ObjectSerializer::toQueryValue($slug);
+        }
+        // query params
+        if ($description !== null) {
+            $queryParams['description'] = ObjectSerializer::toQueryValue($description);
+        }
+        // query params
+        if ($users !== null) {
+            $queryParams['users'] = ObjectSerializer::toQueryValue($users);
+        }
         // query params
         if ($ordering !== null) {
             $queryParams['ordering'] = ObjectSerializer::toQueryValue($ordering);

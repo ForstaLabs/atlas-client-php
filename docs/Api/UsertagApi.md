@@ -120,7 +120,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usertagList**
-> \Swagger\Client\Model\InlineResponse2006 usertagList($ordering, $search, $page, $page_size)
+> \Swagger\Client\Model\InlineResponse2006 usertagList($association_type, $tag_id, $user_id, $ordering, $search, $page, $page_size)
 
 
 
@@ -142,13 +142,16 @@ $apiInstance = new Swagger\Client\Api\UsertagApi(
     new GuzzleHttp\Client(),
     $config
 );
+$association_type = "association_type_example"; // string | 
+$tag_id = "tag_id_example"; // string | 
+$user_id = "user_id_example"; // string | 
 $ordering = "ordering_example"; // string | Which field to use when ordering the results.
 $search = "search_example"; // string | A search term.
 $page = 56; // int | A page number within the paginated result set.
 $page_size = 56; // int | Number of results to return per page.
 
 try {
-    $result = $apiInstance->usertagList($ordering, $search, $page, $page_size);
+    $result = $apiInstance->usertagList($association_type, $tag_id, $user_id, $ordering, $search, $page, $page_size);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsertagApi->usertagList: ', $e->getMessage(), PHP_EOL;
@@ -160,6 +163,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **association_type** | **string**|  | [optional]
+ **tag_id** | **string**|  | [optional]
+ **user_id** | **string**|  | [optional]
  **ordering** | **string**| Which field to use when ordering the results. | [optional]
  **search** | **string**| A search term. | [optional]
  **page** | **int**| A page number within the paginated result set. | [optional]

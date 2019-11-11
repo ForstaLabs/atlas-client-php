@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Request information based on tag expressions
 
-Pass a list of [tag expressions](https://docs.forsta.io/docs/tag-expressions)                               to this endpoint to retrieve information about each expression.
+Pass a list of [tag expressions](https://docs.forsta.io/docs/tag-expressions) to this endpoint to retrieve information about each expression.
 
 ### Example
 ```php
@@ -30,7 +30,7 @@ $apiInstance = new Swagger\Client\Api\TagmathApi(
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \Swagger\Client\Model\BulkTagmathViewResponse(); // \Swagger\Client\Model\BulkTagmathViewResponse | 
+$data = new \Swagger\Client\Model\BulkTagmathViewRequest(); // \Swagger\Client\Model\BulkTagmathViewRequest | 
 
 try {
     $result = $apiInstance->tagmathCreate($data);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\BulkTagmathViewResponse**](../Model/BulkTagmathViewResponse.md)|  |
+ **data** | [**\Swagger\Client\Model\BulkTagmathViewRequest**](../Model/BulkTagmathViewRequest.md)|  |
 
 ### Return type
 

@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/ForstaLabs/atlas-client-php.git"
+      "url": "https://github.com//.git"
     }
   ],
   "require": {
-    "forstalabs/atlas-client-php": "*@dev"
+    "/": "*@dev"
   }
 }
 ```
@@ -87,29 +87,25 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ApiTokenRefreshApi* | [**apiTokenRefreshCreate**](docs/Api/ApiTokenRefreshApi.md#apitokenrefreshcreate) | **POST** /api-token-refresh/ | Returns a refreshed token (with new expiration) based on existing token
 *ConversationApi* | [**conversationCreate**](docs/Api/ConversationApi.md#conversationcreate) | **POST** /conversation/ | Creates a conversation token.
-*ConversationApi* | [**conversationCreate_0**](docs/Api/ConversationApi.md#conversationcreate_0) | **POST** /conversation/{conversation_token}/ | Facilitates placing a user into a Conversation specified by its token.
+*ConversationApi* | [**conversationEdit**](docs/Api/ConversationApi.md#conversationedit) | **POST** /conversation/{conversation_token}/ | Facilitates placing a user into a Conversation specified by its token.
 *ConversationApi* | [**conversationRead**](docs/Api/ConversationApi.md#conversationread) | **GET** /conversation/{conversation_token}/ | Returns information about a conversation (if the requestor is the creator).
-*DirectoryApi* | [**directoryDomainList**](docs/Api/DirectoryApi.md#directorydomainlist) | **GET** /directory/domain/ | A read-only domain directory.
-*DirectoryApi* | [**directoryUserList**](docs/Api/DirectoryApi.md#directoryuserlist) | **GET** /directory/user/ | A read-only global user directory.
-*EphemeralTokenApi* | [**ephemeralTokenCreate**](docs/Api/EphemeralTokenApi.md#ephemeraltokencreate) | **POST** /ephemeral-token | Retrieve the current ephemeral user token for an org
-*EphemeralTokenApi* | [**ephemeralTokenDelete**](docs/Api/EphemeralTokenApi.md#ephemeraltokendelete) | **DELETE** /ephemeral-token | Deletes the current ephemeral user token for your org
+*DirectoryApi* | [**directoryDomainList**](docs/Api/DirectoryApi.md#directorydomainlist) | **GET** /directory/domain/ | Global domain directory.
+*DirectoryApi* | [**directoryUserList**](docs/Api/DirectoryApi.md#directoryuserlist) | **GET** /directory/user/ | Global user directory.
+*EphemeralTokenApi* | [**ephemeralTokenCreate**](docs/Api/EphemeralTokenApi.md#ephemeraltokencreate) | **POST** /ephemeral-token | Retrieves the ephemeral user token
+*EphemeralTokenApi* | [**ephemeralTokenDelete**](docs/Api/EphemeralTokenApi.md#ephemeraltokendelete) | **DELETE** /ephemeral-token | Delete the ephemeral user token
 *EphemeralUserApi* | [**ephemeralUserCreate**](docs/Api/EphemeralUserApi.md#ephemeralusercreate) | **POST** /ephemeral-user/ | Create an ephemeral user
-*InvitationApi* | [**invitationCreate**](docs/Api/InvitationApi.md#invitationcreate) | **POST** /invitation/ | Send an invite to a users phone
-*InvitationApi* | [**invitationDelete**](docs/Api/InvitationApi.md#invitationdelete) | **DELETE** /invitation/{iid}/ | Cancel pending invite
-*JoinApi* | [**joinCreate**](docs/Api/JoinApi.md#joincreate) | **POST** /join/{invitation_token}/ | Creates an account (and an org for it, optionally).
-*JoinApi* | [**joinRead**](docs/Api/JoinApi.md#joinread) | **GET** /join/{invitation_token}/ | Retrieves the latest info associated with an invitation
 *LoginApi* | [**loginCreate**](docs/Api/LoginApi.md#logincreate) | **POST** /login/ | Returns a JWT based on password, otp, or authtoken login mechanisms
-*LoginApi* | [**loginSendRead**](docs/Api/LoginApi.md#loginsendread) | **GET** /login/send/{org}/{tag_slug}/ | Returns current authentication method for a particular user
+*LoginApi* | [**loginSendRead**](docs/Api/LoginApi.md#loginsendread) | **GET** /login/send/{org}/{tag_slug}/ | Returns the current authentication method for the specified user
 *OrgApi* | [**orgCreate**](docs/Api/OrgApi.md#orgcreate) | **POST** /org/ | 
 *OrgApi* | [**orgDelete**](docs/Api/OrgApi.md#orgdelete) | **DELETE** /org/{id}/ | 
 *OrgApi* | [**orgList**](docs/Api/OrgApi.md#orglist) | **GET** /org/ | 
 *OrgApi* | [**orgPartialUpdate**](docs/Api/OrgApi.md#orgpartialupdate) | **PATCH** /org/{id}/ | 
 *OrgApi* | [**orgRead**](docs/Api/OrgApi.md#orgread) | **GET** /org/{id}/ | 
 *OrgApi* | [**orgUpdate**](docs/Api/OrgApi.md#orgupdate) | **PUT** /org/{id}/ | 
-*PasswordApi* | [**passwordResetCreate**](docs/Api/PasswordApi.md#passwordresetcreate) | **POST** /password/reset/ | 
-*PasswordApi* | [**passwordResetUpdate**](docs/Api/PasswordApi.md#passwordresetupdate) | **PUT** /password/reset/{user_id}/ | 
-*RecoverApi* | [**recoverEmailRead**](docs/Api/RecoverApi.md#recoveremailread) | **GET** /recover/email/{email}/ | Sends a list of existing user accounts based on phone number
-*RecoverApi* | [**recoverPhoneRead**](docs/Api/RecoverApi.md#recoverphoneread) | **GET** /recover/phone/{phone}/ | Sends a list of existing user accounts based on email
+*PasswordApi* | [**passwordResetCreate**](docs/Api/PasswordApi.md#passwordresetcreate) | **POST** /password/reset/ | Sends email or SMS to a user with a one time token for password resetting.
+*PasswordApi* | [**passwordResetUpdate**](docs/Api/PasswordApi.md#passwordresetupdate) | **PUT** /password/reset/{user_id}/ | Confirm the password reset via token.
+*RecoverApi* | [**recoverEmailRead**](docs/Api/RecoverApi.md#recoveremailread) | **GET** /recover/email/{email}/ | Sends a list of existing accounts to a users email
+*RecoverApi* | [**recoverPhoneRead**](docs/Api/RecoverApi.md#recoverphoneread) | **GET** /recover/phone/{phone}/ | Sends a list of existing user accounts based on phone number
 *TagApi* | [**tagCreate**](docs/Api/TagApi.md#tagcreate) | **POST** /tag/ | 
 *TagApi* | [**tagDelete**](docs/Api/TagApi.md#tagdelete) | **DELETE** /tag/{id}/ | 
 *TagApi* | [**tagList**](docs/Api/TagApi.md#taglist) | **GET** /tag/ | 
@@ -127,7 +123,7 @@ Class | Method | HTTP request | Description
 *UserApi* | [**userUpdate**](docs/Api/UserApi.md#userupdate) | **PUT** /user/{id}/ | 
 *UserauthtokenApi* | [**userauthtokenCreate**](docs/Api/UserauthtokenApi.md#userauthtokencreate) | **POST** /userauthtoken/ | Create an auth token
 *UserauthtokenApi* | [**userauthtokenDelete**](docs/Api/UserauthtokenApi.md#userauthtokendelete) | **DELETE** /userauthtoken/{id}/ | Delete a token based on token id
-*UserauthtokenApi* | [**userauthtokenList**](docs/Api/UserauthtokenApi.md#userauthtokenlist) | **GET** /userauthtoken/ | Retrieve a list of auth tokens for a specified user
+*UserauthtokenApi* | [**userauthtokenList**](docs/Api/UserauthtokenApi.md#userauthtokenlist) | **GET** /userauthtoken/ | Retrieve the list of auth tokens for a specified user
 *UsertagApi* | [**usertagCreate**](docs/Api/UsertagApi.md#usertagcreate) | **POST** /usertag/ | 
 *UsertagApi* | [**usertagDelete**](docs/Api/UsertagApi.md#usertagdelete) | **DELETE** /usertag/{id}/ | 
 *UsertagApi* | [**usertagList**](docs/Api/UsertagApi.md#usertaglist) | **GET** /usertag/ | 
@@ -138,7 +134,9 @@ Class | Method | HTTP request | Description
 
  - [AssociatedTags](docs/Model/AssociatedTags.md)
  - [AssociatedUsers](docs/Model/AssociatedUsers.md)
+ - [BulkTagmathViewRequest](docs/Model/BulkTagmathViewRequest.md)
  - [BulkTagmathViewResponse](docs/Model/BulkTagmathViewResponse.md)
+ - [BulkTagmathViewResults](docs/Model/BulkTagmathViewResults.md)
  - [ConversationCreate](docs/Model/ConversationCreate.md)
  - [ConversationUseViewRequest](docs/Model/ConversationUseViewRequest.md)
  - [ConversationUseViewResponse](docs/Model/ConversationUseViewResponse.md)
@@ -153,15 +151,12 @@ Class | Method | HTTP request | Description
  - [InlineResponse2004](docs/Model/InlineResponse2004.md)
  - [InlineResponse2005](docs/Model/InlineResponse2005.md)
  - [InlineResponse2006](docs/Model/InlineResponse2006.md)
- - [InvitationCreateViewPostRequest](docs/Model/InvitationCreateViewPostRequest.md)
- - [InvitationCreateViewPostResponse](docs/Model/InvitationCreateViewPostResponse.md)
- - [JoinForstaViewGetResponse](docs/Model/JoinForstaViewGetResponse.md)
- - [JoinForstaViewPostRequest](docs/Model/JoinForstaViewPostRequest.md)
- - [JoinForstaViewPostResponse](docs/Model/JoinForstaViewPostResponse.md)
  - [LightTag](docs/Model/LightTag.md)
  - [LightUser](docs/Model/LightUser.md)
  - [LoginResponse](docs/Model/LoginResponse.md)
  - [Org](docs/Model/Org.md)
+ - [Org1](docs/Model/Org1.md)
+ - [Org2](docs/Model/Org2.md)
  - [PasswordReset](docs/Model/PasswordReset.md)
  - [PasswordResetConfirm](docs/Model/PasswordResetConfirm.md)
  - [PasswordResetViewPostResponse](docs/Model/PasswordResetViewPostResponse.md)
@@ -171,6 +166,8 @@ Class | Method | HTTP request | Description
  - [RecoverCredentialsPhoneViewResponse](docs/Model/RecoverCredentialsPhoneViewResponse.md)
  - [Refresh](docs/Model/Refresh.md)
  - [Tag](docs/Model/Tag.md)
+ - [Tag1](docs/Model/Tag1.md)
+ - [Tag2](docs/Model/Tag2.md)
  - [User](docs/Model/User.md)
  - [UserAuthTokenViewGetResponse](docs/Model/UserAuthTokenViewGetResponse.md)
  - [UserAuthTokenViewPostRequest](docs/Model/UserAuthTokenViewPostRequest.md)
@@ -178,6 +175,7 @@ Class | Method | HTTP request | Description
  - [UserAuthentication](docs/Model/UserAuthentication.md)
  - [UserDirectory](docs/Model/UserDirectory.md)
  - [UserInviteResponse](docs/Model/UserInviteResponse.md)
+ - [UserLoginSend](docs/Model/UserLoginSend.md)
  - [UserTag](docs/Model/UserTag.md)
 
 

@@ -4,16 +4,16 @@ All URIs are relative to *https://atlas.forsta.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ephemeralTokenCreate**](EphemeralTokenApi.md#ephemeralTokenCreate) | **POST** /ephemeral-token | Retrieve the current ephemeral user token for an org
-[**ephemeralTokenDelete**](EphemeralTokenApi.md#ephemeralTokenDelete) | **DELETE** /ephemeral-token | Deletes the current ephemeral user token for your org
+[**ephemeralTokenCreate**](EphemeralTokenApi.md#ephemeralTokenCreate) | **POST** /ephemeral-token | Retrieves the ephemeral user token
+[**ephemeralTokenDelete**](EphemeralTokenApi.md#ephemeralTokenDelete) | **DELETE** /ephemeral-token | Delete the ephemeral user token
 
 
 # **ephemeralTokenCreate**
 > \Swagger\Client\Model\EphemeralTokenPostResponse ephemeralTokenCreate()
 
-Retrieve the current ephemeral user token for an org
+Retrieves the ephemeral user token
 
-Retrieve the current ephemeral user token for the organization associated                               with the given JWT.                               The ephemeral token is typically used for creating ephemeral users via                               our [embedded client](https://docs.forsta.io/docs/embedded-client)
+Retrieves the current ephemeral user token for the requestors org. The ephemeral token is typically used for creating ephemeral users via our [embedded client](https://docs.forsta.io/docs/embedded-client)
 
 ### Example
 ```php
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 # **ephemeralTokenDelete**
 > ephemeralTokenDelete()
 
-Deletes the current ephemeral user token for your org
+Delete the ephemeral user token
 
 Sets the ephemeral user token the requestors org to null.
 

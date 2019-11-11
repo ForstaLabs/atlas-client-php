@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **distribution** | **string** |  | 
 **creator_id** | **string** |  | 
 **org_id** | **string** |  | 
-**user_ids** | **string** |  | 
+**user_ids** | **string[]** |  | 
 **expires** | **string** |  | 
 **created** | **string** |  | 
 **jwt** | **string** |  | 

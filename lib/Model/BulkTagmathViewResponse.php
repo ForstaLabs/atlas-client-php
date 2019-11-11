@@ -57,7 +57,7 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'expressions' => 'string[]'
+        'results' => '\Swagger\Client\Model\BulkTagmathViewResults[]'
     ];
 
     /**
@@ -66,7 +66,7 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'expressions' => null
+        'results' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'expressions' => 'expressions'
+        'results' => 'results'
     ];
 
     /**
@@ -105,7 +105,7 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'expressions' => 'setExpressions'
+        'results' => 'setResults'
     ];
 
     /**
@@ -114,7 +114,7 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'expressions' => 'getExpressions'
+        'results' => 'getResults'
     ];
 
     /**
@@ -177,7 +177,7 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['expressions'] = isset($data['expressions']) ? $data['expressions'] : null;
+        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
     }
 
     /**
@@ -189,8 +189,8 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['expressions'] === null) {
-            $invalidProperties[] = "'expressions' can't be null";
+        if ($this->container['results'] === null) {
+            $invalidProperties[] = "'results' can't be null";
         }
         return $invalidProperties;
     }
@@ -208,25 +208,25 @@ class BulkTagmathViewResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets expressions
+     * Gets results
      *
-     * @return string[]
+     * @return \Swagger\Client\Model\BulkTagmathViewResults[]
      */
-    public function getExpressions()
+    public function getResults()
     {
-        return $this->container['expressions'];
+        return $this->container['results'];
     }
 
     /**
-     * Sets expressions
+     * Sets results
      *
-     * @param string[] $expressions expressions
+     * @param \Swagger\Client\Model\BulkTagmathViewResults[] $results results
      *
      * @return $this
      */
-    public function setExpressions($expressions)
+    public function setResults($results)
     {
-        $this->container['expressions'] = $expressions;
+        $this->container['results'] = $results;
 
         return $this;
     }

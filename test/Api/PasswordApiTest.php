@@ -74,7 +74,7 @@ class PasswordApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for passwordResetCreate
      *
-     * .
+     * Sends email or SMS to a user with a one time token for password resetting..
      *
      */
     public function testPasswordResetCreate()
@@ -84,7 +84,7 @@ class PasswordApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for passwordResetUpdate
      *
-     * .
+     * Confirm the password reset via token..
      *
      */
     public function testPasswordResetUpdate()

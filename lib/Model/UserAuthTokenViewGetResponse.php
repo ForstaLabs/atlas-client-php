@@ -61,7 +61,8 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         'id' => 'string',
         'is_active' => 'string',
         'created' => 'string',
-        'expires' => 'string'
+        'expires' => 'string',
+        'description' => 'string'
     ];
 
     /**
@@ -74,7 +75,8 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         'id' => null,
         'is_active' => null,
         'created' => null,
-        'expires' => null
+        'expires' => null,
+        'description' => null
     ];
 
     /**
@@ -108,7 +110,8 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         'id' => 'id',
         'is_active' => 'is_active',
         'created' => 'created',
-        'expires' => 'expires'
+        'expires' => 'expires',
+        'description' => 'description'
     ];
 
     /**
@@ -121,7 +124,8 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'is_active' => 'setIsActive',
         'created' => 'setCreated',
-        'expires' => 'setExpires'
+        'expires' => 'setExpires',
+        'description' => 'setDescription'
     ];
 
     /**
@@ -134,7 +138,8 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'is_active' => 'getIsActive',
         'created' => 'getCreated',
-        'expires' => 'getExpires'
+        'expires' => 'getExpires',
+        'description' => 'getDescription'
     ];
 
     /**
@@ -202,6 +207,7 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['expires'] = isset($data['expires']) ? $data['expires'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -246,6 +252,13 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         }
         if ((mb_strlen($this->container['expires']) < 1)) {
             $invalidProperties[] = "invalid value for 'expires', the character length must be bigger than or equal to 1.";
+        }
+
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+        if ((mb_strlen($this->container['description']) < 1)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -404,6 +417,35 @@ class UserAuthTokenViewGetResponse implements ModelInterface, ArrayAccess
         }
 
         $this->container['expires'] = $expires;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+
+        if ((mb_strlen($description) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling UserAuthTokenViewGetResponse., must be bigger than or equal to 1.');
+        }
+
+        $this->container['description'] = $description;
 
         return $this;
     }
